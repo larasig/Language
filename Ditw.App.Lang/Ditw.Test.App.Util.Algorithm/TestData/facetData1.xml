@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<facets>
+  <facet tokenType="TITLE" facetName="PEOPLE">
+    <properties>
+      <p n="title" v="$def" />
+      <p n="testProp" v="test" />
+    </properties>
+  </facet>
+  <facet tokenType="TITLE_JAPAN" facetName="PEOPLE">
+    <properties>
+      <p n="title" v="$def" />
+      <p n="nation" v="JAPAN" />
+    </properties>
+  </facet>
+  <facet tokenType="NATION" facetName="LOCATION">
+    <properties>
+      <p n="name" v="$def" />
+    </properties>
+  </facet>
+</facets>
