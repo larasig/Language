@@ -79,9 +79,31 @@ namespace Ditw.App.Lang.Pattern
 		
 		public readonly static AnyChar AC = new AnyChar();
 		#endregion
-		
-		#region Word Non-CHAR Word Non-CHAR Word
-		public static ExprBase CreatePtnWNW(
+
+        #region No Char
+        public class NoChar : ExprBase
+        {
+            public override IEnumerable<MatchInfo> Match(string text)
+            {
+                return base.Match(text);
+            }
+
+            public override string Text
+            {
+                get { return string.Empty; }
+            }
+
+            public override bool IsMatch(string text)
+            {
+                return text == String.Empty;
+            }
+        }
+
+        public readonly static NoChar NC = new NoChar();
+        #endregion
+
+        #region Word Non-CHAR Word Non-CHAR Word
+        public static ExprBase CreatePtnWNW(
 			String separators,
 			params String[][] wordgroups
 		)

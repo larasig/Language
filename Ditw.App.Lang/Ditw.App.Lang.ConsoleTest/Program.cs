@@ -142,7 +142,7 @@ namespace Ditw.App.Lang.ConsoleTest
             {
                 foreach (String s in sentences)
                 {
-                	ShowMatch(_titleExpr.Match(s));
+                    ShowMatch(TestExpr.NationNationRelExpr.Match(s));
                 }
             }
         }

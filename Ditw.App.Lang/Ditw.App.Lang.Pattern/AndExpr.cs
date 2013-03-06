@@ -11,9 +11,42 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Linq;
 
 namespace Ditw.App.Lang.Pattern
 {
+    public class AndExprN : ExprBase
+    {
+        private AndExpr _andExpr;
+        private Int32 _n;
+
+        public override string Text
+        {
+            get { return String.Empty; }
+        }
+
+        public AndExprN(AndExpr andExpr, Int32 n)
+        {
+            _andExpr = andExpr;
+            _n = n;
+        }
+
+        public override IEnumerable<MatchInfo> Match(string text)
+        {
+            var matches = _andExpr.Match(text);
+            var checkedMatches = new List<MatchInfo>(matches.Count());
+            foreach (var match in matches)
+            {
+                var m1 = match.SubMatches[0];
+                var m2 = match.SubMatches[1];
+                if (m2.Index - m1.Index -m1.Length <= _n)
+                {
+                    checkedMatches.Add(match);
+                }
+            }
+            return checkedMatches;
+        }
+    }
 	/// <summary>
 	/// Description of ExprAnd.
 	/// </summary>

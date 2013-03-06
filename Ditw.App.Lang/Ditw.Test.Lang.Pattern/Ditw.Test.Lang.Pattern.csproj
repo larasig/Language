@@ -30,6 +30,66 @@
     <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
     <DefineConstants>TRACE</DefineConstants>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|Itanium'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Itanium\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <DebugType>Full</DebugType>
+    <PlatformTarget>Itanium</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\Ditw.Test.Lang.Pattern.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|Itanium'">
+    <OutputPath>bin\Itanium\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>None</DebugType>
+    <PlatformTarget>Itanium</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Ditw.Test.Lang.Pattern.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <DebugType>Full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\Ditw.Test.Lang.Pattern.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>None</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Ditw.Test.Lang.Pattern.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core">
@@ -50,17 +110,21 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Ditw.App.MediaSource\Ditw.App.MediaSource.DataLayer\Ditw.App.MediaSource.DataLayer.csproj">
+    <ProjectReference Include="..\..\..\..\NEWSFEED-NET\NewsFeeds\Ditw.App.MediaSource.DataLayer\Ditw.App.MediaSource.DataLayer.csproj">
       <Project>{D225D4F0-5F02-4E7A-A7CA-D13783A983CE}</Project>
       <Name>Ditw.App.MediaSource.DataLayer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Ditw.App.MediaSource\Ditw.App.MediaSource.DbUtil\Ditw.App.MediaSource.DbUtil.csproj">
+    <ProjectReference Include="..\..\..\..\NEWSFEED-NET\NewsFeeds\Ditw.App.MediaSource.DbUtil\Ditw.App.MediaSource.DbUtil.csproj">
       <Project>{09D28800-6188-43BE-86FC-1B010C322F80}</Project>
       <Name>Ditw.App.MediaSource.DbUtil</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Ditw.Util\Ditw.Util.Xml\Ditw.Util.Xml.csproj">
-      <Project>{5FDBA311-1E51-4351-9B93-1B8E081C0614}</Project>
-      <Name>Ditw.Util.Xml</Name>
+    <ProjectReference Include="..\..\UTIL\Ditw.App.Util.Algorithm\Ditw.App.Util.Algorithm.csproj">
+      <Project>{52F03265-ECAE-4D0D-B2A0-EA3AC15BDBFB}</Project>
+      <Name>Ditw.App.Util.Algorithm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ditw.App.Lang.ConsoleTest\Ditw.App.Lang.ConsoleTest.csproj">
+      <Project>{87F7D6A5-D0C8-4C68-829D-6DAD782B2DE8}</Project>
+      <Name>Ditw.App.Lang.ConsoleTest</Name>
     </ProjectReference>
     <ProjectReference Include="..\Ditw.App.Lang.Pattern\Ditw.App.Lang.Pattern.csproj">
       <Project>{86061BB4-A488-4C38-B195-8B916CC07265}</Project>
@@ -69,10 +133,6 @@
     <ProjectReference Include="..\Ditw.App.Lang.StaticData\Ditw.App.Lang.StaticData.csproj">
       <Project>{7553B9FD-ADA1-468B-AB9E-F518383AA1D3}</Project>
       <Name>Ditw.App.Lang.StaticData</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Ditw.App.Util.Algorithm\Ditw.App.Util.Algorithm.csproj">
-      <Project>{C9944D59-E5B7-4D82-A1E5-766297ECB6AC}</Project>
-      <Name>Ditw.App.Util.Algorithm</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />

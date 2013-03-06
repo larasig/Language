@@ -19,7 +19,7 @@ namespace Ditw.App.Lang.Pattern
 	{
 		private ExprBase[] _expressions;
 
-		public OrExpr(ExprBase[] exprs)
+		public OrExpr(params ExprBase[] exprs)
 		{
 			if (exprs.Length <= 1)
 			{

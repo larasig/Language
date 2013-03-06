@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{B01E939E-612A-4860-ADE6-2DD9D9A74080}</ProjectGuid>
+    <ProjectGuid>{52F03265-ECAE-4D0D-B2A0-EA3AC15BDBFB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Ditw.Util.IO</RootNamespace>
-    <AssemblyName>Ditw.Util.IO</AssemblyName>
+    <RootNamespace>Ditw.App.Util.Algorithm</RootNamespace>
+    <AssemblyName>Ditw.App.Util.Algorithm</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -36,7 +36,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <DebugType>full</DebugType>
     <PlatformTarget>Itanium</PlatformTarget>
-    <CodeAnalysisLogFile>bin\Debug\Ditw.Util.IO.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisLogFile>bin\Debug\Ditw.App.Util.Algorithm.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
     <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
     <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
     <ErrorReport>prompt</ErrorReport>
@@ -50,7 +50,7 @@
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>
     <PlatformTarget>Itanium</PlatformTarget>
-    <CodeAnalysisLogFile>bin\Release\Ditw.Util.IO.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisLogFile>bin\Release\Ditw.App.Util.Algorithm.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
     <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
     <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
     <ErrorReport>prompt</ErrorReport>
@@ -68,8 +68,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BinaryReaderEx.cs" />
+    <Compile Include="..\..\SharedSource\Ditw.App.Util.Algorithm\AhoCorasickAutomatonEx.cs">
+      <Link>AhoCorasickAutomatonEx.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SharedSource\Ditw.App.Util.Algorithm\AhoCorasickMatching.cs">
+      <Link>AhoCorasickMatching.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SharedSource\Ditw.App.Util.Algorithm\DictionarySerializer.cs">
+      <Link>DictionarySerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SharedSource\Ditw.App.Util.Algorithm\KeywordWithPositionInfo.cs">
+      <Link>KeywordWithPositionInfo.cs</Link>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ditw.App.Util\Ditw.App.Util.csproj">
+      <Project>{7AD539ED-CB29-4841-958E-D0E051399F36}</Project>
+      <Name>Ditw.App.Util</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

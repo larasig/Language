@@ -94,8 +94,12 @@ namespace Ditw.Test.Lang.Pattern
 			//TestAndExpr();
 			//TestRegexExpr_PatternWNW();
 			//TestRegExprWithWordSet();
-			CaptureText();
-			//FilterCapturedText();
+			//CaptureText();
+            DictionaryTest(new String[] {
+                "日军在南京疯狂大屠杀一事，战后中日两国均已出版了大量揭露这方面真相的书籍",
+                "投诉举报中心还将跟踪了解国际食品药品安全重大事件，学习境外食品药品投诉举报工作先进经验，并与有关国家和地区的相关机构或组织建立密切合作关系，拓宽我国食品药品投诉举报工作的合作领域",
+                }
+            );
 
 			
 			Console.Write("Press any key to continue . . . ");
