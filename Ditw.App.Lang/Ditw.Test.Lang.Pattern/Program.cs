@@ -18,6 +18,9 @@ using Ditw.App.Lang.Pattern;
 using Ditw.App.Lang.StaticData;
 using Ditw.App.MediaSource.DbUtil;
 using Ditw.App.Util.Algorithm;
+using Ditw.Util.Xml;
+using Ditw.App.EvtX.Cfg.Test;
+using Ditw.App.Lang.Tokenizer;
 
 namespace Ditw.Test.Lang.Pattern
 {
@@ -95,16 +98,86 @@ namespace Ditw.Test.Lang.Pattern
 			//TestRegexExpr_PatternWNW();
 			//TestRegExprWithWordSet();
 			//CaptureText();
-            DictionaryTest(new String[] {
-                "日军在南京疯狂大屠杀一事，战后中日两国均已出版了大量揭露这方面真相的书籍",
-                "投诉举报中心还将跟踪了解国际食品药品安全重大事件，学习境外食品药品投诉举报工作先进经验，并与有关国家和地区的相关机构或组织建立密切合作关系，拓宽我国食品药品投诉举报工作的合作领域",
-                }
-            );
+            //DictionaryTest(new String[] {
+            //    "日军在南京疯狂大屠杀一事，战后中日两国均已出版了大量揭露这方面真相的书籍",
+            //    "投诉举报中心还将跟踪了解国际食品药品安全重大事件，学习境外食品药品投诉举报工作先进经验，并与有关国家和地区的相关机构或组织建立密切合作关系，拓宽我国食品药品投诉举报工作的合作领域",
+            //    }
+            //);
+            RFTestCases(@"zhs_polrel_all.xml", RFTestCase_ZHS_PolRel);
 
 			
 			Console.Write("Press any key to continue . . . ");
 			Console.ReadKey(true);
 		}
+
+        static void ShowMatch(IEnumerable<MatchInfo> matches)
+        {
+            if (matches == null)
+                return;
+            foreach (MatchInfo m in matches)
+            {
+                Trace.WriteLine("---------------------");
+                Trace.WriteLine(m.SrcText);
+                Trace.Write("  ");
+                Trace.WriteLine(m.Text);
+                foreach (MatchInfo mi in m.SubMatches)
+                {
+                    Trace.WriteLine("\t" + mi.Text);
+                    //Trace.WriteLine("\t" + mi.SrcText.Substring(mi.Index, 10));
+                }
+            }
+        }
+
+        static void RFTestCase_ZHS_Aquire(EvtXTest testCase)
+        {
+            ShowMatch(BuiltInExpressions.BEING_ACQUIRED.Match(testCase.Sentence));
+            ShowMatch(BuiltInExpressions.DUI_ACQUIRED.Match(testCase.Sentence));
+        }
+
+        static String _dictPath = @"C:\git\LANG\Language\Ditw.App.Lang\Ditw.App.Lang.Tokenizer\Dictionaries";
+        static void RFTestCase_ZHS_PolRel(EvtXTest testCase)
+        {
+            ZhsTokenizer.PrepareDictionary(_dictPath);
+
+            TokenizerFilter tf = new TokenizerFilter(ZhsTokenizer.Instance);
+
+            //ShowMatch(BuiltInExpressions.PAY_ATTENTION.Match(testCase.Sentence));
+            //ShowMatch(
+            //    MatchFilters.ExcludeClauseSeparator(
+            //        BuiltInExpressions.RELATIONSHIP_WITH.Match(testCase.Sentence)
+            //    ));
+            ShowMatch(
+                MatchInfoColl.FromEnumerables(
+                    BuiltInExpressions.RELATIONSHIP_WITH.Match(
+                        testCase.Sentence
+                        //"不管是中曾根康弘，还是小泉纯一郎，都在任时间较长，因此得以和美国构建了良好的关系。"
+                        //"他说，在全球范围停止演习和训练，意味着美国军队的参与度将降低，而与其他国家的关系将受损。"
+                        )
+                ).ApplyFilter(tf)
+                .Matches
+                );
+            //ShowMatch(BuiltInExpressions.ATTENTION_PAY.Match(testCase.Sentence));
+        }
+
+
+        static void RFTestCase_ENG_BizTrans(EvtXTest testCase)
+        {
+            //ShowMatch(BuiltInExpressions.PAY_ATTENTION.Match(testCase.Sentence));
+            ShowMatch(BuiltInExpressions.PAY_ATTENTION_1.Match(testCase.Sentence));
+            ShowMatch(BuiltInExpressions.ATTENTION_PAY.Match(testCase.Sentence));
+        }
+
+        const String _pathToRFTestCaseFiles = @"C:\git\LANG\Language\Ditw.App.Lang\TestText";
+        static void RFTestCases(String fileName, Action<EvtXTest> TestCaseHandler)
+        {
+            String testCaseFile = _pathToRFTestCaseFiles + "\\" + fileName;
+
+            EvtXTests testSuite = XmlUtil.DeserializeFromFile<EvtXTests>(testCaseFile);
+            foreach (var t in testSuite.Tests)
+            {
+                TestCaseHandler(t);
+            }
+        }
 		
 		internal static void Assert(Boolean e)
 		{
@@ -405,26 +478,5 @@ namespace Ditw.Test.Lang.Pattern
             
         }
 
-        static void ShowMatch(IEnumerable<MatchInfo> matches)
-        {
-        	if (matches == null)
-        		return;
-            foreach(MatchInfo m in matches)
-            {
-	            Trace.WriteLine("---------------------");
-            	Trace.WriteLine(m.SrcText);
-            	Trace.Write("  ");
-            	Trace.WriteLine(m.DebugText);
-            	if (m.SubMatches != null)
-            	{
-	            	foreach(MatchInfo mi in m.SubMatches)
-	            	{
-		            	Trace.WriteLine("\t" + mi.DebugText);
-		            	//Trace.WriteLine("\t" + mi.SrcText.Substring(mi.Index, 10));
-	            	}
-            	}
-            }
-        }
-        
 	}
 }

@@ -105,6 +105,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BuiltInExpressions.cs" />
     <Compile Include="CapturedTextInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -122,6 +123,10 @@
       <Project>{52F03265-ECAE-4D0D-B2A0-EA3AC15BDBFB}</Project>
       <Name>Ditw.App.Util.Algorithm</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\UTIL\Ditw.Util.Xml\Ditw.Util.Xml.csproj">
+      <Project>{F39FA2D6-0E1A-4792-B375-1B5C4C6E510A}</Project>
+      <Name>Ditw.Util.Xml</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Ditw.App.Lang.ConsoleTest\Ditw.App.Lang.ConsoleTest.csproj">
       <Project>{87F7D6A5-D0C8-4C68-829D-6DAD782B2DE8}</Project>
       <Name>Ditw.App.Lang.ConsoleTest</Name>
@@ -133,6 +138,14 @@
     <ProjectReference Include="..\Ditw.App.Lang.StaticData\Ditw.App.Lang.StaticData.csproj">
       <Project>{7553B9FD-ADA1-468B-AB9E-F518383AA1D3}</Project>
       <Name>Ditw.App.Lang.StaticData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ditw.App.Lang.Tokenizer\Ditw.App.Lang.Tokenizer.csproj">
+      <Project>{2B8CCE12-DF85-4B57-9296-34036F0AC43B}</Project>
+      <Name>Ditw.App.Lang.Tokenizer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RFTestCases\RFTestCases.csproj">
+      <Project>{C2FFED15-8D5E-41F1-A8C7-B544F68B3B72}</Project>
+      <Name>RFTestCases</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />

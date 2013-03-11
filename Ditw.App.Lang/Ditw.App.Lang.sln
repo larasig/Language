@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestText", "TestText", "{D69634FB-D3EF-41E6-AFC1-1487DF135FA2}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{D69634FB-D3EF-41E6-AFC1-1487DF135FA2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ditw.App.Lang.ConsoleTest", "Ditw.App.Lang.ConsoleTest\Ditw.App.Lang.ConsoleTest.csproj", "{87F7D6A5-D0C8-4C68-829D-6DAD782B2DE8}"
 EndProject
@@ -26,6 +26,17 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ditw.App.Util.Algorithm", "..\UTIL\Ditw.App.Util.Algorithm\Ditw.App.Util.Algorithm.csproj", "{52F03265-ECAE-4D0D-B2A0-EA3AC15BDBFB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ditw.Util.Xml", "..\UTIL\Ditw.Util.Xml\Ditw.Util.Xml.csproj", "{F39FA2D6-0E1A-4792-B375-1B5C4C6E510A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RFTestCases", "RFTestCases\RFTestCases.csproj", "{C2FFED15-8D5E-41F1-A8C7-B544F68B3B72}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestCases", "TestCases", "{F91DA8EB-588F-4A8A-8BD0-9BAA5352F5BA}"
+	ProjectSection(SolutionItems) = preProject
+		TestText\business_transaction_sentences.xml = TestText\business_transaction_sentences.xml
+		TestText\zhs_acquire_all.xml = TestText\zhs_acquire_all.xml
+		TestText\zhs_polrel_all.xml = TestText\zhs_polrel_all.xml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ditw.App.Lang.Tokenizer", "Ditw.App.Lang.Tokenizer\Ditw.App.Lang.Tokenizer.csproj", "{2B8CCE12-DF85-4B57-9296-34036F0AC43B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -68,11 +79,21 @@ Global
 		{F39FA2D6-0E1A-4792-B375-1B5C4C6E510A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F39FA2D6-0E1A-4792-B375-1B5C4C6E510A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F39FA2D6-0E1A-4792-B375-1B5C4C6E510A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2FFED15-8D5E-41F1-A8C7-B544F68B3B72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2FFED15-8D5E-41F1-A8C7-B544F68B3B72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2FFED15-8D5E-41F1-A8C7-B544F68B3B72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2FFED15-8D5E-41F1-A8C7-B544F68B3B72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B8CCE12-DF85-4B57-9296-34036F0AC43B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B8CCE12-DF85-4B57-9296-34036F0AC43B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B8CCE12-DF85-4B57-9296-34036F0AC43B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B8CCE12-DF85-4B57-9296-34036F0AC43B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{C2FFED15-8D5E-41F1-A8C7-B544F68B3B72} = {D69634FB-D3EF-41E6-AFC1-1487DF135FA2}
+		{F91DA8EB-588F-4A8A-8BD0-9BAA5352F5BA} = {D69634FB-D3EF-41E6-AFC1-1487DF135FA2}
 		{D225D4F0-5F02-4E7A-A7CA-D13783A983CE} = {FDAC43FC-617C-46C4-AFCD-377C0C2BC20D}
 		{09D28800-6188-43BE-86FC-1B010C322F80} = {FDAC43FC-617C-46C4-AFCD-377C0C2BC20D}
 		{7AD539ED-CB29-4841-958E-D0E051399F36} = {8811874A-7098-4FFF-B5A2-BE59B070CBF2}

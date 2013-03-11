@@ -20,6 +20,13 @@ namespace Ditw.App.Lang.StaticData
 	/// </summary>
 	public class WordSet
 	{
+        [XmlAttribute("Name")]
+        public String Name
+        {
+            get;
+            set;
+        }
+
 		[XmlElement("w")]
 		public List<String> Words
 		{

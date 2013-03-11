@@ -100,12 +100,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AndExpr.cs" />
+    <Compile Include="BuiltinPatterns.cs" />
     <Compile Include="CommonExprs.cs" />
     <Compile Include="CommonFuncs.cs" />
     <Compile Include="ExprBase.cs" />
     <Compile Include="ExprBuilder.cs" />
     <Compile Include="ExprPattern.cs" />
     <Compile Include="IExpr.cs" />
+    <Compile Include="MatchInfoFilter.cs" />
     <Compile Include="LitExpr.cs" />
     <Compile Include="NotExpr.cs" />
     <Compile Include="OrExpr.cs" />
@@ -121,6 +123,10 @@
     <ProjectReference Include="..\..\..\..\NEWSFEED-NET\NewsFeeds\Ditw.App.MediaSource.DbUtil\Ditw.App.MediaSource.DbUtil.csproj">
       <Project>{09D28800-6188-43BE-86FC-1B010C322F80}</Project>
       <Name>Ditw.App.MediaSource.DbUtil</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\UTIL\Ditw.App.Util.Algorithm\Ditw.App.Util.Algorithm.csproj">
+      <Project>{52F03265-ECAE-4D0D-B2A0-EA3AC15BDBFB}</Project>
+      <Name>Ditw.App.Util.Algorithm</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
