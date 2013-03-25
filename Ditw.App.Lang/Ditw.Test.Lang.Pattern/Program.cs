@@ -94,6 +94,14 @@ namespace Ditw.Test.Lang.Pattern
 
 		public static void Main(string[] args)
 		{
+            ZhsTokenizer.PrepareDictionary(_dictPath);
+
+            var tokenList = ZhsTokenizer.Instance.Tokenize(
+                "他说，在全球范围停止演习和训练，意味着美国军队的参与度将降低，而与其他国家的关系将受损。"
+                );
+            tokenList.TraceTokens();
+            Console.ReadLine();
+            //BuiltInExpressions.LIST.Match("以色列、叙利亚和其他中东国家也受到了一定影响");
 			//TestAndExpr();
 			//TestRegexExpr_PatternWNW();
 			//TestRegExprWithWordSet();
@@ -120,6 +128,8 @@ namespace Ditw.Test.Lang.Pattern
                 Trace.WriteLine(m.SrcText);
                 Trace.Write("  ");
                 Trace.WriteLine(m.Text);
+                if (m.SubMatches == null)
+                    continue;
                 foreach (MatchInfo mi in m.SubMatches)
                 {
                     Trace.WriteLine("\t" + mi.Text);
@@ -137,7 +147,7 @@ namespace Ditw.Test.Lang.Pattern
         static String _dictPath = @"C:\git\LANG\Language\Ditw.App.Lang\Ditw.App.Lang.Tokenizer\Dictionaries";
         static void RFTestCase_ZHS_PolRel(EvtXTest testCase)
         {
-            ZhsTokenizer.PrepareDictionary(_dictPath);
+            //ZhsTokenizer.PrepareDictionary(_dictPath);
 
             TokenizerFilter tf = new TokenizerFilter(ZhsTokenizer.Instance);
 
@@ -150,6 +160,7 @@ namespace Ditw.Test.Lang.Pattern
                 MatchInfoColl.FromEnumerables(
                     BuiltInExpressions.RELATIONSHIP_WITH.Match(
                         testCase.Sentence
+                        
                         //"不管是中曾根康弘，还是小泉纯一郎，都在任时间较长，因此得以和美国构建了良好的关系。"
                         //"他说，在全球范围停止演习和训练，意味着美国军队的参与度将降低，而与其他国家的关系将受损。"
                         )

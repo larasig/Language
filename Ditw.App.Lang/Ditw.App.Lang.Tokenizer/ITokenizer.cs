@@ -8,8 +8,9 @@ namespace Ditw.App.Lang.Tokenizer
 {
     public interface ITokenizer
     {
-        IEnumerable<KeywordWithPositionInfo> Tokenize(String inputText);
+        ITokenList Tokenize(String inputText);
 
+        ITokenList Tokenize(ITokenList inputTokenList);
         //public  GetTokens
     }
 

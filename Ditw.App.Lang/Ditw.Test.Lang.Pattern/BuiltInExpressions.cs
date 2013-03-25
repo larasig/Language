@@ -8,6 +8,16 @@ namespace Ditw.Test.Lang.Pattern
 {
     public static class BuiltInExpressions
     {
+        #region List
+        private static String[] _STR_LIST_ENDING = new String[]
+        {
+            "以及",
+            "及",
+            "和",
+        };
+        public static readonly RegexExpr LIST = new RegexExpr("(.+、)+.+(以及|及|和)");
+
+        #endregion
 
         #region  与 ... 的关系
         internal static AndExpr RELATIONSHIP_WITH = new AndExpr(

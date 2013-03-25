@@ -176,5 +176,6 @@ namespace Ditw.App.Lang.Pattern
         };
         public static LitExpr TOGETHER_WITH = LitExpr.FromStrings(_STR_TOGETHER_WITH);
         #endregion
+
     }
 }

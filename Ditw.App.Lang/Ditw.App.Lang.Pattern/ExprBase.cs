@@ -134,52 +134,6 @@ namespace Ditw.App.Lang.Pattern
 			Length = length;
 		}
 
-        private Boolean CheckIndexes(
-            IEnumerable<KeywordWithPositionInfo> tokenPosList,
-            Int32 start,
-            Int32 length
-            )
-        {
-            Int32 end = start + length - 1;
-            Boolean startOk = false, endOk = false;
-            foreach (var t in tokenPosList)
-            {
-                if (t.FirstCharIndex == start
-                    || t.LastCharIndex + 1 == start // relax restriction
-                    )
-                {
-                    startOk = true;
-                    //continue;
-                }
-                if (t.LastCharIndex == end
-                    || t.FirstCharIndex - 1 == end // relax restriction
-                    )
-                {
-                    endOk = true;
-                    //continue;
-                }
-            }
-
-            return startOk && endOk;
-        }
-
-        public Boolean CheckAgainstTokens(IEnumerable<KeywordWithPositionInfo> tokenPosList)
-        {
-            if (SubMatches == null)
-            {
-                return CheckIndexes(tokenPosList, Index, Length);
-            }
-
-            foreach (var subMatch in SubMatches)
-            {
-                if (!subMatch.CheckAgainstTokens(tokenPosList))
-                {
-                    return false;
-                }
-            }
-
-            return true;
-        }
 	}
 	
 	public abstract class ExprBase : IExpr

@@ -47,7 +47,7 @@ namespace Ditw.App.Lang.Tokenizer
             
         }
 
-        public IEnumerable<KeywordWithPositionInfo> Tokenize(String inputText)
+        public ITokenList Tokenize(String inputText)
         {
             if (_acAuto == null)
             {
@@ -55,7 +55,17 @@ namespace Ditw.App.Lang.Tokenizer
                 return null;
             }
 
-            return _acAuto.GetKeywordsPosition(inputText);
+            var words = _acAuto.GetKeywordsPosition(inputText);
+
+            return new WordTokenList(
+                words.Select(w => new StringToken(w))
+                );
+        }
+
+
+        public ITokenList Tokenize(ITokenList inputTokenList)
+        {
+            throw new NotImplementedException();
         }
     }
 
