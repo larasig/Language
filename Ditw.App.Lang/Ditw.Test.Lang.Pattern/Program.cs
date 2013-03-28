@@ -94,13 +94,27 @@ namespace Ditw.Test.Lang.Pattern
 
 		public static void Main(string[] args)
 		{
-            ZhsTokenizer.PrepareDictionary(_dictPath);
 
+#if false
+            ZhsTokenizer.PrepareDictionary(_dictPath);
             var tokenList = ZhsTokenizer.Instance.Tokenize(
                 "他说，在全球范围停止演习和训练，意味着美国军队的参与度将降低，而与其他国家的关系将受损。"
                 );
             tokenList.TraceTokens();
+#endif
+
+#if false
+            String t;
+            t = @"日本内阁官房长官菅义伟周五（2月22日）评价俄罗斯总统普京周四在克里姆林宫向到访的日本首相特使森喜朗重申他有意归还齿舞、色丹两个北方岛屿的意向说：""日本政府将以坚韧顽强的谈判立场解决北方领土问题""，并说""与俄罗斯的关系很重要，安倍首相正考虑适当时期访俄，以互惠形式推进双方经济和安全保障等方面合作极为重要""。";
+            PunctuationMarkHelper.TraceSegmentation(t);
+            t = @"他说，马固然有""中国情""，""民族感情""，但他与美国的关系实在""太深了""，美国人要""遏制中国大陆""，他不可能也决不敢去""冒犯美国""。";
+            PunctuationMarkHelper.TraceSegmentation(t);
+            t = @"耿雁生在国防部月度例行记者会上说：""有关言论歪曲事实，挑拨中国和周边国家的关系，是别有用心的。""";
+            PunctuationMarkHelper.TraceSegmentation(t);
+            t = @"梅德韦杰夫说：""很遗憾，我们与美国的关系正在激化，这是我们不愿看到的。";
+            PunctuationMarkHelper.TraceSegmentation(t);
             Console.ReadLine();
+#endif
             //BuiltInExpressions.LIST.Match("以色列、叙利亚和其他中东国家也受到了一定影响");
 			//TestAndExpr();
 			//TestRegexExpr_PatternWNW();
@@ -111,12 +125,17 @@ namespace Ditw.Test.Lang.Pattern
             //    "投诉举报中心还将跟踪了解国际食品药品安全重大事件，学习境外食品药品投诉举报工作先进经验，并与有关国家和地区的相关机构或组织建立密切合作关系，拓宽我国食品药品投诉举报工作的合作领域",
             //    }
             //);
-            RFTestCases(@"zhs_polrel_all.xml", RFTestCase_ZHS_PolRel);
+            RFTestCases(@"zhs_polrel_all.xml", RFTestCase_ZHS_PolRel_Segmentation); //RFTestCase_ZHS_PolRel);
 
 			
 			Console.Write("Press any key to continue . . . ");
 			Console.ReadKey(true);
 		}
+
+        static void RFTestCase_ZHS_PolRel_Segmentation(EvtXTest testCase)
+        {
+            PunctuationMarkHelper.TraceSegmentation(testCase.Sentence);
+        }
 
         static void ShowMatch(IEnumerable<MatchInfo> matches)
         {
