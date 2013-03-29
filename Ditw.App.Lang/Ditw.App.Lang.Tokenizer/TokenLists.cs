@@ -6,6 +6,7 @@ using System.Diagnostics;
 
 namespace Ditw.App.Lang.Tokenizer
 {
+#if false
     public class CharTokenList : ITokenList
     {
         private String _rawText;
@@ -35,7 +36,7 @@ namespace Ditw.App.Lang.Tokenizer
             throw new NotImplementedException();
         }
     }
-
+#endif
     public class WordTokenList : ITokenList
     {
         private List<IToken> _tokenList;

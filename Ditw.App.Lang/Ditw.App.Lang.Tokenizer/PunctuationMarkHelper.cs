@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Diagnostics;
+using Ditw.App.Lang.Pattern;
 
 namespace Ditw.App.Lang.Tokenizer
 {
@@ -101,6 +102,9 @@ namespace Ditw.App.Lang.Tokenizer
         public const Char QUESTION = '?';
         public const Char QUESTION_CHINESE = '？';
 
+        public const Char EXCLAMATION = '!';
+        public const Char EXCLAMATION_CHINESE = '！';
+
         public const Char QUOTATIONII = '"';
         public const Char QUOTATIONII_CHINESE_OPEN = '“';
         public const Char QUOTATIONII_CHINESE_CLOSE = '”';
@@ -126,6 +130,21 @@ namespace Ditw.App.Lang.Tokenizer
 
 #endregion
 
+        private static readonly RegexExpr REGEX_NUMBER = new RegexExpr(@"\d*\.\d+");
+
+        #region DEBUG pre-processing
+        public static void TracePreProcess(String rawText)
+        {
+            Trace.WriteLine(rawText);
+            foreach (var m in REGEX_NUMBER.Match(rawText))
+            {
+                Trace.WriteLine(m.Text);
+            }
+            Trace.WriteLine("-----------------------------------");
+            Trace.WriteLine(String.Empty);
+        }
+        #endregion
+
         public static readonly Char[] SingleSeparators = new Char[]
         {
             COMMA,
@@ -137,7 +156,9 @@ namespace Ditw.App.Lang.Tokenizer
             PERIOD,
             PERIOD_CHINESE,
             QUESTION,
-            QUESTION_CHINESE
+            QUESTION_CHINESE,
+            EXCLAMATION,
+            EXCLAMATION_CHINESE
         };
 
         public static readonly Dictionary<Char, Char> MarkPairs = new Dictionary<Char, Char>()

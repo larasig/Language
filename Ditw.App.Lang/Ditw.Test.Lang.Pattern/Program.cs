@@ -115,6 +115,12 @@ namespace Ditw.Test.Lang.Pattern
             PunctuationMarkHelper.TraceSegmentation(t);
             Console.ReadLine();
 #endif
+#if true
+            String t;
+            t = @"美国证交会还说，一些位于新加坡的账户在收购消息公布前几天购买了67.6万多股尼克森公司的股票，消息公布后便立即清仓，非法赚取600万美元。";
+            PunctuationMarkHelper.TracePreProcess(t);
+            Console.ReadLine();
+#endif
             //BuiltInExpressions.LIST.Match("以色列、叙利亚和其他中东国家也受到了一定影响");
 			//TestAndExpr();
 			//TestRegexExpr_PatternWNW();
@@ -125,16 +131,22 @@ namespace Ditw.Test.Lang.Pattern
             //    "投诉举报中心还将跟踪了解国际食品药品安全重大事件，学习境外食品药品投诉举报工作先进经验，并与有关国家和地区的相关机构或组织建立密切合作关系，拓宽我国食品药品投诉举报工作的合作领域",
             //    }
             //);
-            RFTestCases(@"zhs_polrel_all.xml", RFTestCase_ZHS_PolRel_Segmentation); //RFTestCase_ZHS_PolRel);
+            //RFTestCases(@"zhs_polrel_all.xml", RFTestCase_Segmentation); //RFTestCase_ZHS_PolRel);
+            RFTestCases(@"zhs_acquire_all.xml", RFTestCase_Preprocess); //RFTestCase_Segmentation); //RFTestCase_ZHS_PolRel);
 
 			
 			Console.Write("Press any key to continue . . . ");
 			Console.ReadKey(true);
 		}
 
-        static void RFTestCase_ZHS_PolRel_Segmentation(EvtXTest testCase)
+        static void RFTestCase_Segmentation(EvtXTest testCase)
         {
             PunctuationMarkHelper.TraceSegmentation(testCase.Sentence);
+        }
+
+        static void RFTestCase_Preprocess(EvtXTest testCase)
+        {
+            PunctuationMarkHelper.TracePreProcess(testCase.Sentence);
         }
 
         static void ShowMatch(IEnumerable<MatchInfo> matches)

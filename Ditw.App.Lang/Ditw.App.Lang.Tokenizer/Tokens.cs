@@ -6,6 +6,7 @@ using Ditw.App.Util.Algorithm;
 
 namespace Ditw.App.Lang.Tokenizer
 {
+#if false
     public class CharToken : IToken
     {
         private Int32 _index;
@@ -35,6 +36,52 @@ namespace Ditw.App.Lang.Tokenizer
         public override String ToString()
         {
             return _srcText[_index].ToString();
+        }
+    }
+#endif
+    public class TokenBase : IToken
+    {
+        public TokenBase(String src, Int32 startIndex, Int32 length)
+        {
+            SrcText = src;
+            FirstCharIndex = startIndex;
+            Length = length;
+        }
+
+        public string SrcText
+        {
+            get;
+            private set;
+        }
+
+        public Int32 FirstCharIndex
+        {
+            get;
+            private set;
+        }
+
+        public Int32 Length
+        {
+            get;
+            private set;
+        }
+
+        public override String ToString()
+        {
+            return SrcText.Substring(FirstCharIndex, Length);
+        }
+
+        public IList<char> CharList
+        {
+            get { return ToString().ToList(); }
+        }
+    }
+
+    public class AtomToken : TokenBase
+    {
+        public AtomToken(String src, Int32 startIndex, Int32 length)
+            : base(src, startIndex, length)
+        {
         }
     }
 
@@ -75,6 +122,12 @@ namespace Ditw.App.Lang.Tokenizer
         public int Length
         {
             get { return _wordPos.LastCharIndex - _wordPos.FirstCharIndex + 1; }
+        }
+
+
+        public IList<Char> CharList
+        {
+            get { return _wordPos.Content.ToList(); }
         }
     }
 }

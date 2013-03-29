@@ -23,6 +23,11 @@ namespace Ditw.App.Lang.Tokenizer
         }
 
         String ToString();
+
+        IList<Char> CharList
+        {
+            get;
+        }
     }
 
     public interface ITokenList
