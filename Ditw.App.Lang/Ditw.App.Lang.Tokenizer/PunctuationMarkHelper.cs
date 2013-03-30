@@ -260,13 +260,17 @@ namespace Ditw.App.Lang.Tokenizer
             if (leftLen > 0)
             {
                 currSeg.Length = leftLen;
-                if (currSeg.ChildSegments != null)
+                // remove the last segment, which contains only a period, question, ...
+                if (!String.IsNullOrEmpty(currSeg.RawText))
                 {
-                    currSeg.ChildSegments.ForEach(
-                        s => s.Source = currSeg.FullText
-                        );
+                    if (currSeg.ChildSegments != null)
+                    {
+                        currSeg.ChildSegments.ForEach(
+                            s => s.Source = currSeg.FullText
+                            );
+                    }
+                    segList.Add(currSeg);
                 }
-                segList.Add(currSeg);
             }
 
             return segList;

@@ -32,6 +32,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestCases", "TestCases", "{F91DA8EB-588F-4A8A-8BD0-9BAA5352F5BA}"
 	ProjectSection(SolutionItems) = preProject
 		TestText\business_transaction_sentences.xml = TestText\business_transaction_sentences.xml
+		TestText\segmentation_zhs_acquire_all.xml = TestText\segmentation_zhs_acquire_all.xml
 		TestText\zhs_acquire_all.xml = TestText\zhs_acquire_all.xml
 		TestText\zhs_polrel_all.xml = TestText\zhs_polrel_all.xml
 	EndProjectSection

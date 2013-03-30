@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testcases>
+  <testcase>
+    <text>日本新闻网7月31日援引《产经新闻》报道称，日本内阁官房副长官长浜博行通过"中间人"，希望与钓鱼岛主岛、南小岛及北小岛3座岛屿"私人所有者"栗原家族进行会谈，商议岛屿"国有化"问题，并计划拿出20亿日元的"收购"金额。</text>
+    <segments>
+      <startindex>0</startindex>
+      <fulltext>日本新闻网7月31日援引《产经新闻》报道称</fulltext>
+      <openmark />
+      <closemark />
+      <child>
+        <startindex>12</startindex>
+        <fulltext>《产经新闻》</fulltext>
+        <openmark>《</openmark>
+        <closemark>》</closemark>
+      </child>
+    </segments>
+    <segments>
+      <startindex>21</startindex>
+      <fulltext>，日本内阁官房副长官长浜博行通过"中间人"</fulltext>
+      <openmark>，</openmark>
+      <closemark />
+      <child>
+        <startindex>16</startindex>
+        <fulltext>"中间人"</fulltext>
+        <openmark>"</openmark>
+        <closemark>"</closemark>
+      </child>
+    </segments>
+    <segments>
+      <startindex>42</startindex>
+      <fulltext>，希望与钓鱼岛主岛、南小岛及北小岛3座岛屿"私人所有者"栗原家族进行会谈</fulltext>
+      <openmark>，</openmark>
+      <closemark />
+      <child>
+        <startindex>21</startindex>
+        <fulltext>"私人所有者"</fulltext>
+        <openmark>"</openmark>
+        <closemark>"</closemark>
+      </child>
+    </segments>
+    <segments>
+      <startindex>78</startindex>
+      <fulltext>，商议岛屿"国有化"问题</fulltext>
+      <openmark>，</openmark>
+      <closemark />
+      <child>
+        <startindex>5</startindex>
+        <fulltext>"国有化"</fulltext>
+        <openmark>"</openmark>
+        <closemark>"</closemark>
+      </child>
+    </segments>
+    <segments>
+      <startindex>90</startindex>
+      <fulltext>，并计划拿出20亿日元的"收购"金额</fulltext>
+      <openmark>，</openmark>
+      <closemark />
+      <child>
+        <startindex>12</startindex>
+        <fulltext>"收购"</fulltext>
+        <openmark>"</openmark>
+        <closemark>"</closemark>
+      </child>
+    </segments>
+  </testcase>
+  <testcase>
+    <text>石垣市议会日前已通过一份意见书，要求中央政府买下钓鱼岛。</text>
+    <segments>
+      <startindex>0</startindex>
+      <fulltext>石垣市议会日前已通过一份意见书</fulltext>
+      <openmark />
+      <closemark />
+    </segments>
+    <segments>
+      <startindex>15</startindex>
+      <fulltext>，要求中央政府买下钓鱼岛</fulltext>
+      <openmark>，</openmark>
+      <closemark />
+    </segments>
+  </testcase>
+  <testcase>
+    <text>新华社中国网事：前往南沙捕捞的30艘渔船之中，有1艘3000吨的综合补给船，为捕捞船队提供油、水、冰、鱼货收购等服务，兼负指挥船职能，29艘140吨以上的钢质船，这是海南省历年来最大规模的捕捞活动之一。</text>
+    <segments>
+      <startindex>0</startindex>
+      <fulltext>新华社中国网事</fulltext>
+      <openmark />
+      <closemark />
+    </segments>
+    <segments>
+      <startindex>7</startindex>
+      <fulltext>：前往南沙捕捞的30艘渔船之中</fulltext>
+      <openmark>：</openmark>
+      <closemark />
+    </segments>
+    <segments>
+      <startindex>22</startindex>
+      <fulltext>，有1艘3000吨的综合补给船</fulltext>
+      <openmark>，</openmark>
+      <closemark />
+    </segments>
+    <segments>
+      <startindex>37</startindex>
+      <fulltext>，为捕捞船队提供油、水、冰、鱼货收购等服务</fulltext>
+      <openmark>，</openmark>
+      <closemark />
+    </segments>
+    <segments>
+      <startindex>58</startindex>
+      <fulltext>，兼负指挥船职能</fulltext>
+      <openmark>，</openmark>
+      <closemark />
+    </segments>
+    <segments>
+      <startindex>66</startindex>
+      <fulltext>，29艘140吨以上的钢质船</fulltext>
+      <openmark>，</openmark>
+      <closemark />
+    </segments>
+    <segments>
+      <startindex>80</startindex>
+      <fulltext>，这是海南省历年来最大规模的捕捞活动之一</fulltext>
+      <openmark>，</openmark>
+      <closemark />
+    </segments>
+  </testcase>
+  <testcase>
+    <text>CB&amp;I将以现金加股票的形式收购绍尔集团，并将为后者支付大幅度溢价。</text>
+    <segments>
+      <startindex>0</startindex>
+      <fulltext>CB&amp;I将以现金加股票的形式收购绍尔集团</fulltext>
+      <openmark />
+      <closemark />
+    </segments>
+    <segments>
+      <startindex>20</startindex>
+      <fulltext>，并将为后者支付大幅度溢价</fulltext>
+      <openmark>，</openmark>
+      <closemark />
+    </segments>
+  </testcase>
+  <testcase>
+    <text>此前，日本首相野田佳彦在国会参议院回答质询时表示，日本政府已经正式开始着手"收购"钓鱼岛手续，争取在明年4月将钓鱼岛"国有化"。</text>
+    <segments>
+      <startindex>0</startindex>
+      <fulltext>此前</fulltext>
+      <openmark />
+      <closemark />
+    </segments>
+    <segments>
+      <startindex>2</startindex>
+      <fulltext>，日本首相野田佳彦在国会参议院回答质询时表示</fulltext>
+      <openmark>，</openmark>
+      <closemark />
+    </segments>
+    <segments>
+      <startindex>24</startindex>
+      <fulltext>，日本政府已经正式开始着手"收购"钓鱼岛手续</fulltext>
+      <openmark>，</openmark>
+      <closemark />
+      <child>
+        <startindex>13</startindex>
+        <fulltext>"收购"</fulltext>
+        <openmark>"</openmark>
+        <closemark>"</closemark>
+      </child>
+    </segments>
+    <segments>
+      <startindex>46</startindex>
+      <fulltext>，争取在明年4月将钓鱼岛"国有化"</fulltext>
+      <openmark>，</openmark>
+      <closemark />
+      <child>
+        <startindex>12</startindex>
+        <fulltext>"国有化"</fulltext>
+        <openmark>"</openmark>
+        <closemark>"</closemark>
+      </child>
+    </segments>
+  </testcase>
+</testcases>
