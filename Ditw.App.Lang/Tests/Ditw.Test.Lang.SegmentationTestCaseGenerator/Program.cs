@@ -6,12 +6,14 @@ using Ditw.App.EvtX.Cfg.Test;
 using Ditw.Util.Xml;
 using Ditw.App.Lang.Tokenizer;
 using Ditw.Test.Lang.Segmentation;
+using System.Diagnostics;
 
 namespace Ditw.Test.Lang.SegmentationTestCaseGenerator
 {
     class Program
     {
         const String _pathToRFTestCaseFiles = @"C:\git\LANG\Language\Ditw.App.Lang\TestText";
+
         static void RFTestCases(String fileName, Action<EvtXTest> TestCaseHandler)
         {
             String testCaseFile = _pathToRFTestCaseFiles + "\\" + fileName;
@@ -23,6 +25,16 @@ namespace Ditw.Test.Lang.SegmentationTestCaseGenerator
             }
         }
 
+        const String regextest = @"<regextoken Id=""n"">
+<regex><![CDATA[\d*\.\d+]]></regex>
+<regex><![CDATA[\d+]]></regex>
+<regex id=""date""><![CDATA[\d+日]]></regex>
+<regex id=""month""><![CDATA[\d+月]]></regex>
+<regex id=""year""><![CDATA[\d+年]]></regex>
+<regex><![CDATA[{{year}}{{month}}]]></regex>
+<regex><![CDATA[{{month}}{{date}}]]></regex>
+<regex><![CDATA[{{year}}{{month}}{{date}}]]></regex>
+</regextoken>";
         static SegmentationTestCases _testCases;
         static void Main(string[] args)
         {
@@ -39,12 +51,26 @@ namespace Ditw.Test.Lang.SegmentationTestCaseGenerator
 
             _testCases = new SegmentationTestCases();
             _testCases.TestCases = new List<SegmentationTestCase>();
-            RFTestCases(@"zhs_acquire_all.xml", RFTestCase_Segmentation); //RFTestCase_ZHS_PolRel);
+            RFTestCases(@"zhs_acquire_all.xml", RFTestCase_Test1); //RFTestCase_Segmentation); //RFTestCase_ZHS_PolRel);
 
-            XmlUtil.Serialize(_testCases, _pathToRFTestCaseFiles + @"\segmentation_test.xml");
+            //XmlUtil.Serialize(_testCases, _pathToRFTestCaseFiles + @"\segmentation_test.xml");
 			
 			Console.Write("Press any key to continue . . . ");
 			Console.ReadKey(true);
+        }
+        static void RFTestCase_Test1(EvtXTest testCase)
+        {
+            RegexToken rt = new RegexToken();
+            rt.Xml = XmlUtil.DeserializeString<RegexTokenXml>(regextest);
+            String tmp = testCase.Sentence; //"而且，花旗银行还开出7.7亿美元收购仁川炼油公司的价格，比中化集团的5.6亿美元高出2.2亿美元，超出了中化集团的承受能力，最终导致了并购失败。";
+            BasicTextSegment bts = new BasicTextSegment(
+                tmp, 0, tmp.Length);
+            var t = rt.MatchText(bts);
+            Trace.WriteLine(t.Text);
+            Trace.WriteLine("-----------------------------------");
+            t.TraceSegment();
+            Trace.WriteLine(String.Empty);
+            //Console.ReadLine();
         }
 
         static void RFTestCase_Segmentation(EvtXTest testCase)

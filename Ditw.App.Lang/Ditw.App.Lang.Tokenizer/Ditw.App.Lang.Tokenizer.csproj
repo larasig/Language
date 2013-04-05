@@ -73,10 +73,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Filters.cs" />
+    <Compile Include="ITextSegment.cs" />
     <Compile Include="IToken.cs" />
     <Compile Include="ITokenizer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PunctuationMarkHelper.cs" />
+    <Compile Include="RegexToken.cs" />
     <Compile Include="SentencePreProcessor.cs" />
     <Compile Include="Tokenizers.cs" />
     <Compile Include="TokenLists.cs" />

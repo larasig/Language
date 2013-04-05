@@ -1,6 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <testcases>
   <testcase>
+    <text>美国证交会还说，一些位于新加坡的账户在收购消息公布前几天购买了67.6万多股尼克森公司的股票，消息公布后便立即清仓，非法赚取600万美元。</text>
+    <segments>
+      <startindex>0</startindex>
+      <fulltext>美国证交会还说</fulltext>
+      <openmark />
+      <closemark />
+    </segments>
+    <segments>
+      <startindex>7</startindex>
+      <fulltext>，一些位于新加坡的账户在收购消息公布前几天购买了67.6万多股尼克森公司的股票</fulltext>
+      <openmark>，</openmark>
+      <closemark />
+    </segments>
+    <segments>
+      <startindex>46</startindex>
+      <fulltext>，消息公布后便立即清仓</fulltext>
+      <openmark>，</openmark>
+      <closemark />
+    </segments>
+    <segments>
+      <startindex>57</startindex>
+      <fulltext>，非法赚取600万美元</fulltext>
+      <openmark>，</openmark>
+      <closemark />
+    </segments>
+  </testcase>
+  <testcase>
     <text>日本新闻网7月31日援引《产经新闻》报道称，日本内阁官房副长官长浜博行通过"中间人"，希望与钓鱼岛主岛、南小岛及北小岛3座岛屿"私人所有者"栗原家族进行会谈，商议岛屿"国有化"问题，并计划拿出20亿日元的"收购"金额。</text>
     <segments>
       <startindex>0</startindex>

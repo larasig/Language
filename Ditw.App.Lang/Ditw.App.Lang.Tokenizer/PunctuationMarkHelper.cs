@@ -9,18 +9,39 @@ namespace Ditw.App.Lang.Tokenizer
 {
     public class TextSegment
     {
-        public Int32 StartIndex;
-        public Int32 Length;
+        public Int32 StartIndex
+        {
+            get;
+            set;
+        }
+        public Int32 Length
+        {
+            get;
+            set;
+        }
 
-        public Nullable<Char> OpenMark;
-        public Nullable<Char> CloseMark;
+        public Nullable<Char> OpenMark
+        {
+            get;
+            set;
+        }
+
+        public Nullable<Char> CloseMark
+        {
+            get;
+            set;
+        }
 
         public Int32 EndIndex
         {
             get { return StartIndex + Length - 1; }
         }
 
-        public String Source;
+        public String Source
+        {
+            get;
+            set;
+        }
 
         public String FullText
         {
@@ -52,13 +73,13 @@ namespace Ditw.App.Lang.Tokenizer
             set;
         }
 
-        public void ChildSegmentPass()
+        public void ChildSegmentPass(List<AtomToken> tokenList)
         {
             if (ChildSegments == null)
                 return;
             foreach (var cs in ChildSegments)
             {
-                cs.ChildSegments = PunctuationMarkHelper.OnePass(cs.RawText)
+                cs.ChildSegments = PunctuationMarkHelper.OnePass(cs.RawText, tokenList)
                     .Where(s => s.Length < cs.RawText.Length)
                     .ToList();
             }
@@ -132,15 +153,27 @@ namespace Ditw.App.Lang.Tokenizer
 
         private static readonly RegexExpr REGEX_NUMBER = new RegexExpr(@"\d*\.\d+");
 
+        internal static List<AtomToken> PreprocessTokens(String rawText)
+        {
+            List<AtomToken> tokenList = new List<AtomToken>();
+            foreach (var m in REGEX_NUMBER.Match(rawText))
+            {
+                tokenList.Add(
+                    new AtomToken(rawText, m.Index, m.Length)
+                    );
+            }
+            return tokenList;
+        }
+
         #region DEBUG pre-processing
         public static void TracePreProcess(String rawText)
         {
             Trace.WriteLine(rawText);
-            foreach (var m in REGEX_NUMBER.Match(rawText))
-            {
-                Trace.WriteLine(m.Text);
-            }
             Trace.WriteLine("-----------------------------------");
+            List<AtomToken> tokenList = PreprocessTokens(rawText);
+            tokenList.ForEach(
+                t => Trace.WriteLine(t.ToString())
+                );
             Trace.WriteLine(String.Empty);
         }
         #endregion
@@ -174,7 +207,21 @@ namespace Ditw.App.Lang.Tokenizer
             {QUOTATIONII, QUOTATIONII},
         };
 
-        internal static IList<TextSegment> OnePass(String text)
+        private static Boolean InTokenList(Int32 index, List<AtomToken> tokenList)
+        {
+            if (tokenList == null || tokenList.Count == 0)
+                return false;
+            foreach(var t in tokenList)
+            {
+                if (t.FirstCharIndex <= index && index < t.FirstCharIndex + t.Length)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        internal static IList<TextSegment> OnePass(String text, List<AtomToken> preTokenList)
         {
             Int32 currIndex = 0;
             //Int32 prevIndex = 0;
@@ -186,6 +233,11 @@ namespace Ditw.App.Lang.Tokenizer
             };
             while (currIndex < text.Length)
             {
+                if (InTokenList(currIndex, preTokenList))
+                {
+                    currIndex++;
+                    continue;
+                }
                 Char currChar = text[currIndex];
                 Int32 endIndex = -1;
                 if (SingleSeparators.Contains(currChar))
@@ -307,10 +359,11 @@ namespace Ditw.App.Lang.Tokenizer
 #endif
         public static IList<TextSegment> Segmentation(String text)
         {
-            var segList = OnePass(text);
+            var tokenList = PreprocessTokens(text);
+            var segList = OnePass(text, tokenList);
             foreach (var s in segList)
             {
-                s.ChildSegmentPass();
+                s.ChildSegmentPass(tokenList);
             }
             return segList;
         }

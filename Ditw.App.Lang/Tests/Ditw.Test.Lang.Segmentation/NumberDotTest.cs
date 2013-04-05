@@ -69,7 +69,13 @@ namespace Ditw.Test.Lang.Segmentation
             SegmentationTestCases testcases = LoadTestCases(@"segmentation_zhs_acquire_all.xml");
 
             testcases.TestCases.ForEach(
-                tc => Assert.IsTrue(RunOneTestCase(tc))
+                tc =>
+                {
+                    if (!RunOneTestCase(tc))
+                    {
+                        Assert.Fail(tc.TestText);
+                    }
+                }
                 );
         }
 

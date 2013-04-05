@@ -202,14 +202,8 @@
     <text>美国证交会还说，一些位于新加坡的账户在收购消息公布前几天购买了67.6万多股尼克森公司的股票，消息公布后便立即清仓，非法赚取600万美元。</text>
     <segments>
       <startindex>0</startindex>
-      <fulltext>美国证交会还说</fulltext>
+      <fulltext>美国证交会还说，一些位于新加坡的账户在收购消息公布前几天购买了67</fulltext>
       <openmark />
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>7</startindex>
-      <fulltext>，一些位于新加坡的账户在收购消息公布前几天购买了67</fulltext>
-      <openmark>，</openmark>
       <closemark />
     </segments>
     <segments>
@@ -805,32 +799,8 @@
     <text>同时，7月10日，豪客比奇中国公司发函向本报记者证实，豪客比奇已与北京卓越航空签署了收购排他性协议，卓越航空将以17.9亿美元收购豪客比奇，并于未来6周内付款，支持豪客比奇在交易完成前的飞机相关运营业务。</text>
     <segments>
       <startindex>0</startindex>
-      <fulltext>同时</fulltext>
+      <fulltext>同时，7月10日，豪客比奇中国公司发函向本报记者证实，豪客比奇已与北京卓越航空签署了收购排他性协议，卓越航空将以17</fulltext>
       <openmark />
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>2</startindex>
-      <fulltext>，7月10日</fulltext>
-      <openmark>，</openmark>
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>8</startindex>
-      <fulltext>，豪客比奇中国公司发函向本报记者证实</fulltext>
-      <openmark>，</openmark>
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>26</startindex>
-      <fulltext>，豪客比奇已与北京卓越航空签署了收购排他性协议</fulltext>
-      <openmark>，</openmark>
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>49</startindex>
-      <fulltext>，卓越航空将以17</fulltext>
-      <openmark>，</openmark>
       <closemark />
     </segments>
     <segments>
@@ -1096,32 +1066,8 @@
     <text>而且，花旗银行还开出7.7亿美元收购仁川炼油公司的价格，比中化集团的5.6亿美元高出2.2亿美元，超出了中化集团的承受能力，最终导致了并购失败。</text>
     <segments>
       <startindex>0</startindex>
-      <fulltext>而且</fulltext>
+      <fulltext>而且，花旗银行还开出7.7亿美元收购仁川炼油公司的价格，比中化集团的5.6亿美元高出2</fulltext>
       <openmark />
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>2</startindex>
-      <fulltext>，花旗银行还开出7</fulltext>
-      <openmark>，</openmark>
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>11</startindex>
-      <fulltext>.7亿美元收购仁川炼油公司的价格</fulltext>
-      <openmark>.</openmark>
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>27</startindex>
-      <fulltext>，比中化集团的5</fulltext>
-      <openmark>，</openmark>
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>35</startindex>
-      <fulltext>.6亿美元高出2</fulltext>
-      <openmark>.</openmark>
       <closemark />
     </segments>
     <segments>
@@ -1210,14 +1156,8 @@
     <text>1992年，北京首都钢铁公司斥资1.18亿美元收购秘鲁铁矿组建了首钢秘鲁铁矿股份有限公司，成为中国在南美洲投资的最大生产企业。</text>
     <segments>
       <startindex>0</startindex>
-      <fulltext>1992年</fulltext>
+      <fulltext>1992年，北京首都钢铁公司斥资1</fulltext>
       <openmark />
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>5</startindex>
-      <fulltext>，北京首都钢铁公司斥资1</fulltext>
-      <openmark>，</openmark>
       <closemark />
     </segments>
     <segments>
@@ -1237,26 +1177,8 @@
     <text>2005年6月，明基竞购西门子成功，而西门子不但未索取现金，还倒贴明基2.5亿欧元。</text>
     <segments>
       <startindex>0</startindex>
-      <fulltext>2005年6月</fulltext>
+      <fulltext>2005年6月，明基竞购西门子成功，而西门子不但未索取现金，还倒贴明基2</fulltext>
       <openmark />
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>7</startindex>
-      <fulltext>，明基竞购西门子成功</fulltext>
-      <openmark>，</openmark>
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>17</startindex>
-      <fulltext>，而西门子不但未索取现金</fulltext>
-      <openmark>，</openmark>
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>29</startindex>
-      <fulltext>，还倒贴明基2</fulltext>
-      <openmark>，</openmark>
       <closemark />
     </segments>
     <segments>
@@ -1333,14 +1255,8 @@
     <text>因据百盛商业宣布，斥4.2亿元人民币向大股东收购Victor Crest(卖方)的100%股本权益，藉此购入青岛、大连及沈阳的百货店权益，代价将以美元支付。</text>
     <segments>
       <startindex>0</startindex>
-      <fulltext>因据百盛商业宣布</fulltext>
+      <fulltext>因据百盛商业宣布，斥4</fulltext>
       <openmark />
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>8</startindex>
-      <fulltext>，斥4</fulltext>
-      <openmark>，</openmark>
       <closemark />
     </segments>
     <segments>
@@ -1372,14 +1288,8 @@
     <text>今年8月，中化集团又声明以59.8亿元人民币现金收购埃穆拉能源公司，成交金额超过估价约11.%。</text>
     <segments>
       <startindex>0</startindex>
-      <fulltext>今年8月</fulltext>
+      <fulltext>今年8月，中化集团又声明以59</fulltext>
       <openmark />
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>4</startindex>
-      <fulltext>，中化集团又声明以59</fulltext>
-      <openmark>，</openmark>
       <closemark />
     </segments>
     <segments>
@@ -1531,38 +1441,8 @@
     <text>在这之前，雀巢已收购了豪吉、太太乐，日本味之素收购淘大，联合利华收购“老蔡酱油”，而亨氏则在2010年以1.65亿美元收购了“味事达”酱油、开平“广合”腐乳所在的福达食品。</text>
     <segments>
       <startindex>0</startindex>
-      <fulltext>在这之前</fulltext>
+      <fulltext>在这之前，雀巢已收购了豪吉、太太乐，日本味之素收购淘大，联合利华收购“老蔡酱油”，而亨氏则在2010年以1</fulltext>
       <openmark />
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>4</startindex>
-      <fulltext>，雀巢已收购了豪吉、太太乐</fulltext>
-      <openmark>，</openmark>
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>17</startindex>
-      <fulltext>，日本味之素收购淘大</fulltext>
-      <openmark>，</openmark>
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>27</startindex>
-      <fulltext>，联合利华收购“老蔡酱油”</fulltext>
-      <openmark>，</openmark>
-      <closemark />
-      <child>
-        <startindex>7</startindex>
-        <fulltext>“老蔡酱油”</fulltext>
-        <openmark>“</openmark>
-        <closemark>”</closemark>
-      </child>
-    </segments>
-    <segments>
-      <startindex>40</startindex>
-      <fulltext>，而亨氏则在2010年以1</fulltext>
-      <openmark>，</openmark>
       <closemark />
     </segments>
     <segments>
@@ -1711,14 +1591,8 @@
     <text>”今年6月份，诺基亚宣布将以4.1亿美元现金收购Symbian剩余52%的股份，并将免费对其他手机制造商开放Symbian系统。</text>
     <segments>
       <startindex>0</startindex>
-      <fulltext>”今年6月份</fulltext>
+      <fulltext>”今年6月份，诺基亚宣布将以4</fulltext>
       <openmark />
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>6</startindex>
-      <fulltext>，诺基亚宣布将以4</fulltext>
-      <openmark>，</openmark>
       <closemark />
     </segments>
     <segments>
@@ -1855,20 +1729,8 @@
     <text>经济观察网 记者 彭友力帆股份（601777）昨日晚间披露，拟出资人民币 2717.76 万元，收购上海沪总企业发展有限公司持有的上海新概念出租汽车有限公司100%国有股权，收购完成后新概念出租车将成为公司的全资子公司。</text>
     <segments>
       <startindex>0</startindex>
-      <fulltext>经济观察网 记者 彭友力帆股份（601777）昨日晚间披露</fulltext>
+      <fulltext>经济观察网 记者 彭友力帆股份（601777）昨日晚间披露，拟出资人民币 2717</fulltext>
       <openmark />
-      <closemark />
-      <child>
-        <startindex>15</startindex>
-        <fulltext>（601777）</fulltext>
-        <openmark>（</openmark>
-        <closemark>）</closemark>
-      </child>
-    </segments>
-    <segments>
-      <startindex>29</startindex>
-      <fulltext>，拟出资人民币 2717</fulltext>
-      <openmark>，</openmark>
       <closemark />
     </segments>
     <segments>
@@ -1915,39 +1777,9 @@
     <text>3年后，天业股份再次谋求收购天业黄金，仅10%的股权就要花费1.6亿元，3年间“增值”达7.27倍。</text>
     <segments>
       <startindex>0</startindex>
-      <fulltext>3年后</fulltext>
+      <fulltext>3年后，天业股份再次谋求收购天业黄金，仅10%的股权就要花费1.6亿元，3年间“增值”达7</fulltext>
       <openmark />
       <closemark />
-    </segments>
-    <segments>
-      <startindex>3</startindex>
-      <fulltext>，天业股份再次谋求收购天业黄金</fulltext>
-      <openmark>，</openmark>
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>18</startindex>
-      <fulltext>，仅10%的股权就要花费1</fulltext>
-      <openmark>，</openmark>
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>31</startindex>
-      <fulltext>.6亿元</fulltext>
-      <openmark>.</openmark>
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>35</startindex>
-      <fulltext>，3年间“增值”达7</fulltext>
-      <openmark>，</openmark>
-      <closemark />
-      <child>
-        <startindex>4</startindex>
-        <fulltext>“增值”</fulltext>
-        <openmark>“</openmark>
-        <closemark>”</closemark>
-      </child>
     </segments>
     <segments>
       <startindex>45</startindex>
@@ -2104,33 +1936,9 @@
     <text>据了解，此前鸿海与夏普达成以每股550日元(约合人民币44.7元)的价格收购夏普9.9%股份的协议。</text>
     <segments>
       <startindex>0</startindex>
-      <fulltext>据了解</fulltext>
+      <fulltext>据了解，此前鸿海与夏普达成以每股550日元(约合人民币44.7元)的价格收购夏普9</fulltext>
       <openmark />
       <closemark />
-    </segments>
-    <segments>
-      <startindex>3</startindex>
-      <fulltext>，此前鸿海与夏普达成以每股550日元(约合人民币44.7元)的价格收购夏普9</fulltext>
-      <openmark>，</openmark>
-      <closemark />
-      <child>
-        <startindex>18</startindex>
-        <fulltext>(约合人民币44.7元)</fulltext>
-        <openmark>(</openmark>
-        <closemark>)</closemark>
-        <child>
-          <startindex>0</startindex>
-          <fulltext>约合人民币44</fulltext>
-          <openmark />
-          <closemark />
-        </child>
-        <child>
-          <startindex>7</startindex>
-          <fulltext>.7元</fulltext>
-          <openmark>.</openmark>
-          <closemark />
-        </child>
-      </child>
     </segments>
     <segments>
       <startindex>41</startindex>
@@ -2143,20 +1951,8 @@
     <text>回溯资料，在2009年7月，中粮集团联手厚朴基金以每股17.6港元的价格，斥资61亿港元收购蒙牛乳业20%的股权，成为第一大股东，开创了"国有资本＋民营资本＋战略合作"的创新模式。</text>
     <segments>
       <startindex>0</startindex>
-      <fulltext>回溯资料</fulltext>
+      <fulltext>回溯资料，在2009年7月，中粮集团联手厚朴基金以每股17</fulltext>
       <openmark />
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>4</startindex>
-      <fulltext>，在2009年7月</fulltext>
-      <openmark>，</openmark>
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>13</startindex>
-      <fulltext>，中粮集团联手厚朴基金以每股17</fulltext>
-      <openmark>，</openmark>
       <closemark />
     </segments>
     <segments>
@@ -2194,14 +1990,8 @@
     <text>中海油7月23日晚间宣布，将以每股27.50美元，总价约151亿美元现金收购加拿大尼克森（Nexen Inc）所有流通中的普通股。</text>
     <segments>
       <startindex>0</startindex>
-      <fulltext>中海油7月23日晚间宣布</fulltext>
+      <fulltext>中海油7月23日晚间宣布，将以每股27</fulltext>
       <openmark />
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>12</startindex>
-      <fulltext>，将以每股27</fulltext>
-      <openmark>，</openmark>
       <closemark />
     </segments>
     <segments>
@@ -2227,20 +2017,8 @@
     <text>1月30日，三一重工发布公告，3.24亿欧元收购普茨迈斯特90%股权，证实了对有"大象"之称的全球混凝土机械巨头德国普茨迈斯特公司的收购。</text>
     <segments>
       <startindex>0</startindex>
-      <fulltext>1月30日</fulltext>
+      <fulltext>1月30日，三一重工发布公告，3</fulltext>
       <openmark />
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>5</startindex>
-      <fulltext>，三一重工发布公告</fulltext>
-      <openmark>，</openmark>
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>14</startindex>
-      <fulltext>，3</fulltext>
-      <openmark>，</openmark>
       <closemark />
     </segments>
     <segments>
@@ -2266,20 +2044,8 @@
     <text>今年3月份，夏普与台湾鸿海精密达成一项重要协议，将�市液晶面板工厂37.6%的股份售予鸿海精密，后者同时还同意收购夏普10%的股份。</text>
     <segments>
       <startindex>0</startindex>
-      <fulltext>今年3月份</fulltext>
+      <fulltext>今年3月份，夏普与台湾鸿海精密达成一项重要协议，将�市液晶面板工厂37</fulltext>
       <openmark />
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>5</startindex>
-      <fulltext>，夏普与台湾鸿海精密达成一项重要协议</fulltext>
-      <openmark>，</openmark>
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>23</startindex>
-      <fulltext>，将�市液晶面板工厂37</fulltext>
-      <openmark>，</openmark>
       <closemark />
     </segments>
     <segments>
@@ -2299,50 +2065,8 @@
     <text>今年3月，夏普和台湾代工巨头鸿海精密工业股份有限公司(Hon Hai Precision Industry Co., 简称：鸿海精密)签署了一份史无前例的协议，夏普将�市工厂37.6%的权益出售给鸿海精密，后者还同意收购夏普10%的股权。</text>
     <segments>
       <startindex>0</startindex>
-      <fulltext>今年3月</fulltext>
+      <fulltext>今年3月，夏普和台湾代工巨头鸿海精密工业股份有限公司(Hon Hai Precision Industry Co., 简称：鸿海精密)签署了一份史无前例的协议，夏普将�市工厂37</fulltext>
       <openmark />
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>4</startindex>
-      <fulltext>，夏普和台湾代工巨头鸿海精密工业股份有限公司(Hon Hai Precision Industry Co., 简称：鸿海精密)签署了一份史无前例的协议</fulltext>
-      <openmark>，</openmark>
-      <closemark />
-      <child>
-        <startindex>22</startindex>
-        <fulltext>(Hon Hai Precision Industry Co., 简称：鸿海精密)</fulltext>
-        <openmark>(</openmark>
-        <closemark>)</closemark>
-        <child>
-          <startindex>0</startindex>
-          <fulltext>Hon Hai Precision Industry Co</fulltext>
-          <openmark />
-          <closemark />
-        </child>
-        <child>
-          <startindex>29</startindex>
-          <fulltext>.</fulltext>
-          <openmark>.</openmark>
-          <closemark />
-        </child>
-        <child>
-          <startindex>30</startindex>
-          <fulltext>, 简称</fulltext>
-          <openmark>,</openmark>
-          <closemark />
-        </child>
-        <child>
-          <startindex>34</startindex>
-          <fulltext>：鸿海精密</fulltext>
-          <openmark>：</openmark>
-          <closemark />
-        </child>
-      </child>
-    </segments>
-    <segments>
-      <startindex>79</startindex>
-      <fulltext>，夏普将�市工厂37</fulltext>
-      <openmark>，</openmark>
       <closemark />
     </segments>
     <segments>
@@ -2362,14 +2086,8 @@
     <text>2004年，联想集团以12.5亿美元收购IBM旗下亏损的PC部门。</text>
     <segments>
       <startindex>0</startindex>
-      <fulltext>2004年</fulltext>
+      <fulltext>2004年，联想集团以12</fulltext>
       <openmark />
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>5</startindex>
-      <fulltext>，联想集团以12</fulltext>
-      <openmark>，</openmark>
       <closemark />
     </segments>
     <segments>
@@ -2386,12 +2104,6 @@
       <fulltext>[滚动]希捷完成收购硬盘生产商LaCie 64</fulltext>
       <openmark />
       <closemark />
-      <child>
-        <startindex>0</startindex>
-        <fulltext>[滚动]</fulltext>
-        <openmark>[</openmark>
-        <closemark>]</closemark>
-      </child>
     </segments>
     <segments>
       <startindex>23</startindex>
@@ -2403,18 +2115,6 @@
         <fulltext>(08-07 12:01)</fulltext>
         <openmark>(</openmark>
         <closemark>)</closemark>
-        <child>
-          <startindex>0</startindex>
-          <fulltext>08-07 12</fulltext>
-          <openmark />
-          <closemark />
-        </child>
-        <child>
-          <startindex>8</startindex>
-          <fulltext>:01</fulltext>
-          <openmark>:</openmark>
-          <closemark />
-        </child>
       </child>
     </segments>
   </testcase>
@@ -2422,65 +2122,23 @@
     <text>据该协议内容，鸿海精密将以550日元/股价格(约7美元/股)收购夏普10%的股份，总收购价达669亿日元(约8.5亿美元)。</text>
     <segments>
       <startindex>0</startindex>
-      <fulltext>据该协议内容</fulltext>
+      <fulltext>据该协议内容，鸿海精密将以550日元/股价格(约7美元/股)收购夏普10%的股份，总收购价达669亿日元(约8</fulltext>
       <openmark />
       <closemark />
     </segments>
     <segments>
-      <startindex>6</startindex>
-      <fulltext>，鸿海精密将以550日元/股价格(约7美元/股)收购夏普10%的股份</fulltext>
-      <openmark>，</openmark>
+      <startindex>55</startindex>
+      <fulltext>.5亿美元)</fulltext>
+      <openmark>.</openmark>
       <closemark />
-      <child>
-        <startindex>16</startindex>
-        <fulltext>(约7美元/股)</fulltext>
-        <openmark>(</openmark>
-        <closemark>)</closemark>
-      </child>
-    </segments>
-    <segments>
-      <startindex>40</startindex>
-      <fulltext>，总收购价达669亿日元(约8.5亿美元)</fulltext>
-      <openmark>，</openmark>
-      <closemark />
-      <child>
-        <startindex>12</startindex>
-        <fulltext>(约8.5亿美元)</fulltext>
-        <openmark>(</openmark>
-        <closemark>)</closemark>
-        <child>
-          <startindex>0</startindex>
-          <fulltext>约8</fulltext>
-          <openmark />
-          <closemark />
-        </child>
-        <child>
-          <startindex>2</startindex>
-          <fulltext>.5亿美元</fulltext>
-          <openmark>.</openmark>
-          <closemark />
-        </child>
-      </child>
     </segments>
   </testcase>
   <testcase>
     <text>1月31日，三一重工在总部长沙举行发布会，宣布以26.54亿人民币收购德国普茨迈斯特公司90%股权，上演一场“吞象”行动。</text>
     <segments>
       <startindex>0</startindex>
-      <fulltext>1月31日</fulltext>
+      <fulltext>1月31日，三一重工在总部长沙举行发布会，宣布以26</fulltext>
       <openmark />
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>5</startindex>
-      <fulltext>，三一重工在总部长沙举行发布会</fulltext>
-      <openmark>，</openmark>
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>20</startindex>
-      <fulltext>，宣布以26</fulltext>
-      <openmark>，</openmark>
       <closemark />
     </segments>
     <segments>
@@ -2506,20 +2164,8 @@
     <text>在得到法国财政部、美国及德国的反垄断部门的批准后，Seagate 宣布成功从 LaCie 的 CEO Philippe Spruch 及其他公司成员以每股 €4.05 买入 64.5% 的股份，完成了对 LaCie 的收购，</text>
     <segments>
       <startindex>0</startindex>
-      <fulltext>在得到法国财政部、美国及德国的反垄断部门的批准后</fulltext>
+      <fulltext>在得到法国财政部、美国及德国的反垄断部门的批准后，Seagate 宣布成功从 LaCie 的 CEO Philippe Spruch 及其他公司成员以每股 €4.05 买入 64</fulltext>
       <openmark />
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>24</startindex>
-      <fulltext>，Seagate 宣布成功从 LaCie 的 CEO Philippe Spruch 及其他公司成员以每股 €4</fulltext>
-      <openmark>，</openmark>
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>80</startindex>
-      <fulltext>.05 买入 64</fulltext>
-      <openmark>.</openmark>
       <closemark />
     </segments>
     <segments>
@@ -2713,14 +2359,8 @@
     <text>2004年10月28日，上汽集团以5亿美元正式收购韩国双龙汽车48.92%股权，这被业内认为的“双赢交易”却在并购后遭遇重大难题。</text>
     <segments>
       <startindex>0</startindex>
-      <fulltext>2004年10月28日</fulltext>
+      <fulltext>2004年10月28日，上汽集团以5亿美元正式收购韩国双龙汽车48</fulltext>
       <openmark />
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>11</startindex>
-      <fulltext>，上汽集团以5亿美元正式收购韩国双龙汽车48</fulltext>
-      <openmark>，</openmark>
       <closemark />
     </segments>
     <segments>
@@ -2824,14 +2464,8 @@
     <text>·1985年：道琼斯以2.823亿美元收购了Telerate的32%股份。</text>
     <segments>
       <startindex>0</startindex>
-      <fulltext>·1985年</fulltext>
+      <fulltext>·1985年：道琼斯以2</fulltext>
       <openmark />
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>6</startindex>
-      <fulltext>：道琼斯以2</fulltext>
-      <openmark>：</openmark>
       <closemark />
     </segments>
     <segments>
@@ -3169,39 +2803,15 @@
     <text>继去年收购梧州稀土10%股权后，鼎立股份（600614，收盘价13.84元）再度出手。</text>
     <segments>
       <startindex>0</startindex>
-      <fulltext>继去年收购梧州稀土10%股权后</fulltext>
+      <fulltext>继去年收购梧州稀土10%股权后，鼎立股份（600614，收盘价13</fulltext>
       <openmark />
       <closemark />
     </segments>
     <segments>
-      <startindex>15</startindex>
-      <fulltext>，鼎立股份（600614，收盘价13.84元）再度出手</fulltext>
-      <openmark>，</openmark>
+      <startindex>33</startindex>
+      <fulltext>.84元）再度出手</fulltext>
+      <openmark>.</openmark>
       <closemark />
-      <child>
-        <startindex>5</startindex>
-        <fulltext>（600614，收盘价13.84元）</fulltext>
-        <openmark>（</openmark>
-        <closemark>）</closemark>
-        <child>
-          <startindex>0</startindex>
-          <fulltext>600614</fulltext>
-          <openmark />
-          <closemark />
-        </child>
-        <child>
-          <startindex>6</startindex>
-          <fulltext>，收盘价13</fulltext>
-          <openmark>，</openmark>
-          <closemark />
-        </child>
-        <child>
-          <startindex>12</startindex>
-          <fulltext>.84元</fulltext>
-          <openmark>.</openmark>
-          <closemark />
-        </child>
-      </child>
     </segments>
   </testcase>
   <testcase>
@@ -3223,26 +2833,8 @@
     <text>去年12月，劲嘉股份几乎“一气呵成”，合计斥资4.05亿元收购了江西风采丽52%股权和重庆宏声57%股权。</text>
     <segments>
       <startindex>0</startindex>
-      <fulltext>去年12月</fulltext>
+      <fulltext>去年12月，劲嘉股份几乎“一气呵成”，合计斥资4</fulltext>
       <openmark />
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>5</startindex>
-      <fulltext>，劲嘉股份几乎“一气呵成”</fulltext>
-      <openmark>，</openmark>
-      <closemark />
-      <child>
-        <startindex>7</startindex>
-        <fulltext>“一气呵成”</fulltext>
-        <openmark>“</openmark>
-        <closemark>”</closemark>
-      </child>
-    </segments>
-    <segments>
-      <startindex>18</startindex>
-      <fulltext>，合计斥资4</fulltext>
-      <openmark>，</openmark>
       <closemark />
     </segments>
     <segments>
@@ -3256,26 +2848,8 @@
     <text>据外国媒体报道，Nexon公司周五宣布，其已经以6.88亿美元的价格收购了韩国游戏发行商NCsoft公司14.7%的股份。</text>
     <segments>
       <startindex>0</startindex>
-      <fulltext>据外国媒体报道</fulltext>
+      <fulltext>据外国媒体报道，Nexon公司周五宣布，其已经以6.88亿美元的价格收购了韩国游戏发行商NCsoft公司14</fulltext>
       <openmark />
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>7</startindex>
-      <fulltext>，Nexon公司周五宣布</fulltext>
-      <openmark>，</openmark>
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>19</startindex>
-      <fulltext>，其已经以6</fulltext>
-      <openmark>，</openmark>
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>25</startindex>
-      <fulltext>.88亿美元的价格收购了韩国游戏发行商NCsoft公司14</fulltext>
-      <openmark>.</openmark>
       <closemark />
     </segments>
     <segments>
@@ -3289,14 +2863,8 @@
     <text>完成收购后，沃尔沃集团所持道依茨公司股份比例从原先的6.7%上升至超过25%，跃居后者最大股东地位。</text>
     <segments>
       <startindex>0</startindex>
-      <fulltext>完成收购后</fulltext>
+      <fulltext>完成收购后，沃尔沃集团所持道依茨公司股份比例从原先的6</fulltext>
       <openmark />
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>5</startindex>
-      <fulltext>，沃尔沃集团所持道依茨公司股份比例从原先的6</fulltext>
-      <openmark>，</openmark>
       <closemark />
     </segments>
     <segments>
@@ -3316,20 +2884,8 @@
     <text>腾讯财经讯  北京时间6月5日上午消息，据国外媒体报道，阿提哈德航空公司当地时间5日宣布其已经收购了维珍澳大利亚航空公司3.96%的股份。</text>
     <segments>
       <startindex>0</startindex>
-      <fulltext>腾讯财经讯  北京时间6月5日上午消息</fulltext>
+      <fulltext>腾讯财经讯  北京时间6月5日上午消息，据国外媒体报道，阿提哈德航空公司当地时间5日宣布其已经收购了维珍澳大利亚航空公司3</fulltext>
       <openmark />
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>19</startindex>
-      <fulltext>，据国外媒体报道</fulltext>
-      <openmark>，</openmark>
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>27</startindex>
-      <fulltext>，阿提哈德航空公司当地时间5日宣布其已经收购了维珍澳大利亚航空公司3</fulltext>
-      <openmark>，</openmark>
       <closemark />
     </segments>
     <segments>
@@ -3358,14 +2914,8 @@
     <text>1999年，LVMH就曾经悄无声息地买下Gucci的34.4%股份，企图入主Gucci。</text>
     <segments>
       <startindex>0</startindex>
-      <fulltext>1999年</fulltext>
+      <fulltext>1999年，LVMH就曾经悄无声息地买下Gucci的34</fulltext>
       <openmark />
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>5</startindex>
-      <fulltext>，LVMH就曾经悄无声息地买下Gucci的34</fulltext>
-      <openmark>，</openmark>
       <closemark />
     </segments>
     <segments>
@@ -3385,32 +2935,8 @@
     <text>当地时间8月27日，浙江青年集团与荷兰跑车制造商世爵（Spyker）签署框架协议，青年汽车投资1000万欧元，收购世爵29.9%股份。</text>
     <segments>
       <startindex>0</startindex>
-      <fulltext>当地时间8月27日</fulltext>
+      <fulltext>当地时间8月27日，浙江青年集团与荷兰跑车制造商世爵（Spyker）签署框架协议，青年汽车投资1000万欧元，收购世爵29</fulltext>
       <openmark />
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>9</startindex>
-      <fulltext>，浙江青年集团与荷兰跑车制造商世爵（Spyker）签署框架协议</fulltext>
-      <openmark>，</openmark>
-      <closemark />
-      <child>
-        <startindex>17</startindex>
-        <fulltext>（Spyker）</fulltext>
-        <openmark>（</openmark>
-        <closemark>）</closemark>
-      </child>
-    </segments>
-    <segments>
-      <startindex>40</startindex>
-      <fulltext>，青年汽车投资1000万欧元</fulltext>
-      <openmark>，</openmark>
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>54</startindex>
-      <fulltext>，收购世爵29</fulltext>
-      <openmark>，</openmark>
       <closemark />
     </segments>
     <segments>
@@ -3472,27 +2998,9 @@
     <text>公告显示，国资委已经批准“彩虹股份”收购山西彩虹电子玻璃有限公司(下简称“彩虹玻璃”)69.5308%的股权。</text>
     <segments>
       <startindex>0</startindex>
-      <fulltext>公告显示</fulltext>
+      <fulltext>公告显示，国资委已经批准“彩虹股份”收购山西彩虹电子玻璃有限公司(下简称“彩虹玻璃”)69</fulltext>
       <openmark />
       <closemark />
-    </segments>
-    <segments>
-      <startindex>4</startindex>
-      <fulltext>，国资委已经批准“彩虹股份”收购山西彩虹电子玻璃有限公司(下简称“彩虹玻璃”)69</fulltext>
-      <openmark>，</openmark>
-      <closemark />
-      <child>
-        <startindex>8</startindex>
-        <fulltext>“彩虹股份”</fulltext>
-        <openmark>“</openmark>
-        <closemark>”</closemark>
-      </child>
-      <child>
-        <startindex>28</startindex>
-        <fulltext>(下简称“彩虹玻璃”)</fulltext>
-        <openmark>(</openmark>
-        <closemark>)</closemark>
-      </child>
     </segments>
     <segments>
       <startindex>45</startindex>
@@ -3538,32 +3046,8 @@
     <text>7月20日，中信证券全资子公司中信国际将以12.52亿美元收购里昂证券全部股权，中信已支付3.1亿美元完成19.9%股权交割，后续交易将于2013年6月底结束，如果交易成功，将成为我国券商企业收购外资券商的首笔交易。</text>
     <segments>
       <startindex>0</startindex>
-      <fulltext>7月20日</fulltext>
+      <fulltext>7月20日，中信证券全资子公司中信国际将以12.52亿美元收购里昂证券全部股权，中信已支付3.1亿美元完成19</fulltext>
       <openmark />
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>5</startindex>
-      <fulltext>，中信证券全资子公司中信国际将以12</fulltext>
-      <openmark>，</openmark>
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>23</startindex>
-      <fulltext>.52亿美元收购里昂证券全部股权</fulltext>
-      <openmark>.</openmark>
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>39</startindex>
-      <fulltext>，中信已支付3</fulltext>
-      <openmark>，</openmark>
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>46</startindex>
-      <fulltext>.1亿美元完成19</fulltext>
-      <openmark>.</openmark>
       <closemark />
     </segments>
     <segments>
@@ -3595,14 +3079,8 @@
     <text>7月13日，四川波鸿集团斥资1.95亿元成功购得全球最大汽车零部件铸造巨头加拿大Wescast全部股权；</text>
     <segments>
       <startindex>0</startindex>
-      <fulltext>7月13日</fulltext>
+      <fulltext>7月13日，四川波鸿集团斥资1</fulltext>
       <openmark />
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>5</startindex>
-      <fulltext>，四川波鸿集团斥资1</fulltext>
-      <openmark>，</openmark>
       <closemark />
     </segments>
     <segments>
@@ -3616,38 +3094,8 @@
     <text>【立讯精密：1.18亿元收购珠海双赢100%股权】立讯精密收购珠海双赢柔软电路有限公司的全部股权，股权转让价为人民币1.18亿元。</text>
     <segments>
       <startindex>0</startindex>
-      <fulltext>【立讯精密：1.18亿元收购珠海双赢100%股权】立讯精密收购珠海双赢柔软电路有限公司的全部股权</fulltext>
+      <fulltext>【立讯精密：1.18亿元收购珠海双赢100%股权】立讯精密收购珠海双赢柔软电路有限公司的全部股权，股权转让价为人民币1</fulltext>
       <openmark />
-      <closemark />
-      <child>
-        <startindex>0</startindex>
-        <fulltext>【立讯精密：1.18亿元收购珠海双赢100%股权】</fulltext>
-        <openmark>【</openmark>
-        <closemark>】</closemark>
-        <child>
-          <startindex>0</startindex>
-          <fulltext>立讯精密</fulltext>
-          <openmark />
-          <closemark />
-        </child>
-        <child>
-          <startindex>4</startindex>
-          <fulltext>：1</fulltext>
-          <openmark>：</openmark>
-          <closemark />
-        </child>
-        <child>
-          <startindex>6</startindex>
-          <fulltext>.18亿元收购珠海双赢100%股权</fulltext>
-          <openmark>.</openmark>
-          <closemark />
-        </child>
-      </child>
-    </segments>
-    <segments>
-      <startindex>48</startindex>
-      <fulltext>，股权转让价为人民币1</fulltext>
-      <openmark>，</openmark>
       <closemark />
     </segments>
     <segments>
@@ -3712,32 +3160,8 @@
     <text>根据签订的收购合同，大元股份及公司指定受让人以2.5亿元的价格收购新疆托里县世峰黄金矿业有限公司(下称“世峰黄金”)的全部股权，其中大元股份以1.3亿元的价格收购世峰黄金52%的股权。</text>
     <segments>
       <startindex>0</startindex>
-      <fulltext>根据签订的收购合同</fulltext>
+      <fulltext>根据签订的收购合同，大元股份及公司指定受让人以2.5亿元的价格收购新疆托里县世峰黄金矿业有限公司(下称“世峰黄金”)的全部股权，其中大元股份以1</fulltext>
       <openmark />
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>9</startindex>
-      <fulltext>，大元股份及公司指定受让人以2</fulltext>
-      <openmark>，</openmark>
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>24</startindex>
-      <fulltext>.5亿元的价格收购新疆托里县世峰黄金矿业有限公司(下称“世峰黄金”)的全部股权</fulltext>
-      <openmark>.</openmark>
-      <closemark />
-      <child>
-        <startindex>24</startindex>
-        <fulltext>(下称“世峰黄金”)</fulltext>
-        <openmark>(</openmark>
-        <closemark>)</closemark>
-      </child>
-    </segments>
-    <segments>
-      <startindex>63</startindex>
-      <fulltext>，其中大元股份以1</fulltext>
-      <openmark>，</openmark>
       <closemark />
     </segments>
     <segments>
@@ -3928,32 +3352,8 @@
     <text>财富创业板消息：中信证券上周五晚间宣布，公司当天召开的董事会通过了《关于全资子公司中信证券国际有限公司收购里昂证券100%股权的议案》，中信证券将以12.52亿美元的总价收购里昂证券全部股份。</text>
     <segments>
       <startindex>0</startindex>
-      <fulltext>财富创业板消息</fulltext>
+      <fulltext>财富创业板消息：中信证券上周五晚间宣布，公司当天召开的董事会通过了《关于全资子公司中信证券国际有限公司收购里昂证券100%股权的议案》，中信证券将以12</fulltext>
       <openmark />
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>7</startindex>
-      <fulltext>：中信证券上周五晚间宣布</fulltext>
-      <openmark>：</openmark>
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>19</startindex>
-      <fulltext>，公司当天召开的董事会通过了《关于全资子公司中信证券国际有限公司收购里昂证券100%股权的议案》</fulltext>
-      <openmark>，</openmark>
-      <closemark />
-      <child>
-        <startindex>14</startindex>
-        <fulltext>《关于全资子公司中信证券国际有限公司收购里昂证券100%股权的议案》</fulltext>
-        <openmark>《</openmark>
-        <closemark>》</closemark>
-      </child>
-    </segments>
-    <segments>
-      <startindex>67</startindex>
-      <fulltext>，中信证券将以12</fulltext>
-      <openmark>，</openmark>
       <closemark />
     </segments>
     <segments>
@@ -4045,14 +3445,8 @@
     <text>去年12月12日，新奥—中石化财团提出以每股3.5港元，或总共167亿港元收购中国燃气全部股份。</text>
     <segments>
       <startindex>0</startindex>
-      <fulltext>去年12月12日</fulltext>
+      <fulltext>去年12月12日，新奥—中石化财团提出以每股3</fulltext>
       <openmark />
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>8</startindex>
-      <fulltext>，新奥—中石化财团提出以每股3</fulltext>
-      <openmark>，</openmark>
       <closemark />
     </segments>
     <segments>
@@ -4369,14 +3763,8 @@
     <text>许继电气晚间公告，平安信托9.6亿购得许继集团100%股权。</text>
     <segments>
       <startindex>0</startindex>
-      <fulltext>许继电气晚间公告</fulltext>
+      <fulltext>许继电气晚间公告，平安信托9</fulltext>
       <openmark />
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>8</startindex>
-      <fulltext>，平安信托9</fulltext>
-      <openmark>，</openmark>
       <closemark />
     </segments>
     <segments>
@@ -4423,32 +3811,8 @@
     <text>10月9日晚间，上海城投控股股份有限公司宣布，公司下属全资子公司上海城投置地（集团）有限公司于9月29日通过竞购方式获得上海其越置业有限公司100%股权，成交价为4.42亿元。</text>
     <segments>
       <startindex>0</startindex>
-      <fulltext>10月9日晚间</fulltext>
+      <fulltext>10月9日晚间，上海城投控股股份有限公司宣布，公司下属全资子公司上海城投置地（集团）有限公司于9月29日通过竞购方式获得上海其越置业有限公司100%股权，成交价为4</fulltext>
       <openmark />
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>7</startindex>
-      <fulltext>，上海城投控股股份有限公司宣布</fulltext>
-      <openmark>，</openmark>
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>22</startindex>
-      <fulltext>，公司下属全资子公司上海城投置地（集团）有限公司于9月29日通过竞购方式获得上海其越置业有限公司100%股权</fulltext>
-      <openmark>，</openmark>
-      <closemark />
-      <child>
-        <startindex>16</startindex>
-        <fulltext>（集团）</fulltext>
-        <openmark>（</openmark>
-        <closemark>）</closemark>
-      </child>
-    </segments>
-    <segments>
-      <startindex>76</startindex>
-      <fulltext>，成交价为4</fulltext>
-      <openmark>，</openmark>
       <closemark />
     </segments>
     <segments>
@@ -4462,56 +3826,8 @@
     <text>科力远(25.21,2.29,9.99%)拟通过增发股份和配套融资募集zi金的方式，以12.2亿收购自然人曹佑民持有的鸿源稀土100%股权。</text>
     <segments>
       <startindex>0</startindex>
-      <fulltext>科力远(25.21,2.29,9.99%)拟通过增发股份和配套融资募集zi金的方式</fulltext>
+      <fulltext>科力远(25.21,2.29,9.99%)拟通过增发股份和配套融资募集zi金的方式，以12</fulltext>
       <openmark />
-      <closemark />
-      <child>
-        <startindex>3</startindex>
-        <fulltext>(25.21,2.29,9.99%)</fulltext>
-        <openmark>(</openmark>
-        <closemark>)</closemark>
-        <child>
-          <startindex>0</startindex>
-          <fulltext>25</fulltext>
-          <openmark />
-          <closemark />
-        </child>
-        <child>
-          <startindex>2</startindex>
-          <fulltext>.21</fulltext>
-          <openmark>.</openmark>
-          <closemark />
-        </child>
-        <child>
-          <startindex>5</startindex>
-          <fulltext>,2</fulltext>
-          <openmark>,</openmark>
-          <closemark />
-        </child>
-        <child>
-          <startindex>7</startindex>
-          <fulltext>.29</fulltext>
-          <openmark>.</openmark>
-          <closemark />
-        </child>
-        <child>
-          <startindex>10</startindex>
-          <fulltext>,9</fulltext>
-          <openmark>,</openmark>
-          <closemark />
-        </child>
-        <child>
-          <startindex>12</startindex>
-          <fulltext>.99%</fulltext>
-          <openmark>.</openmark>
-          <closemark />
-        </child>
-      </child>
-    </segments>
-    <segments>
-      <startindex>41</startindex>
-      <fulltext>，以12</fulltext>
-      <openmark>，</openmark>
       <closemark />
     </segments>
     <segments>
@@ -4549,20 +3865,8 @@
     <text>全景网8月13日讯 浙江震元（000705）周一盘后发布公告称，公司将出资534.71万元收购浙江新光药品有限公司100%股权，该事项已获公司董事会审议通过。</text>
     <segments>
       <startindex>0</startindex>
-      <fulltext>全景网8月13日讯 浙江震元（000705）周一盘后发布公告称</fulltext>
+      <fulltext>全景网8月13日讯 浙江震元（000705）周一盘后发布公告称，公司将出资534</fulltext>
       <openmark />
-      <closemark />
-      <child>
-        <startindex>14</startindex>
-        <fulltext>（000705）</fulltext>
-        <openmark>（</openmark>
-        <closemark>）</closemark>
-      </child>
-    </segments>
-    <segments>
-      <startindex>31</startindex>
-      <fulltext>，公司将出资534</fulltext>
-      <openmark>，</openmark>
       <closemark />
     </segments>
     <segments>
@@ -4960,38 +4264,8 @@
     <text>中国网5月3日讯阳光股份（000608）晚间发布公告称，公司及公司全资控股子公司北京瑞金阳光投资有限公司拟与杜然、杜厦签署《股权转让框架协议》，由公司全资控股子公司天津瑞尚投资有限公司收购杜然持有的天津德然商贸有限公司100%股权，股权转让款总计人民币1.63亿元，从而间接取得天津德然持有的天津西青杨柳青森林绿野建筑工程有限公司70%的股权。</text>
     <segments>
       <startindex>0</startindex>
-      <fulltext>中国网5月3日讯阳光股份（000608）晚间发布公告称</fulltext>
+      <fulltext>中国网5月3日讯阳光股份（000608）晚间发布公告称，公司及公司全资控股子公司北京瑞金阳光投资有限公司拟与杜然、杜厦签署《股权转让框架协议》，由公司全资控股子公司天津瑞尚投资有限公司收购杜然持有的天津德然商贸有限公司100%股权，股权转让款总计人民币1</fulltext>
       <openmark />
-      <closemark />
-      <child>
-        <startindex>12</startindex>
-        <fulltext>（000608）</fulltext>
-        <openmark>（</openmark>
-        <closemark>）</closemark>
-      </child>
-    </segments>
-    <segments>
-      <startindex>27</startindex>
-      <fulltext>，公司及公司全资控股子公司北京瑞金阳光投资有限公司拟与杜然、杜厦签署《股权转让框架协议》</fulltext>
-      <openmark>，</openmark>
-      <closemark />
-      <child>
-        <startindex>34</startindex>
-        <fulltext>《股权转让框架协议》</fulltext>
-        <openmark>《</openmark>
-        <closemark>》</closemark>
-      </child>
-    </segments>
-    <segments>
-      <startindex>71</startindex>
-      <fulltext>，由公司全资控股子公司天津瑞尚投资有限公司收购杜然持有的天津德然商贸有限公司100%股权</fulltext>
-      <openmark>，</openmark>
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>115</startindex>
-      <fulltext>，股权转让款总计人民币1</fulltext>
-      <openmark>，</openmark>
       <closemark />
     </segments>
     <segments>
@@ -5032,44 +4306,8 @@
     <text>基础数据: 2012年03月31日 事件：天威视讯公告称拟通过增发股票方式以13亿元收购深圳关外地区有线电视运营商天宝存续公司、天隆存续公司100%股权;增发价格拟定为17.25元/股，计划发行7600万股，发行完成后总股本将达到3.96亿股;天宝、天隆承诺12/13/14年预计净利润分别为3502万元、3900万元、3300万元和3075万元、2900万元、3500万元。</text>
     <segments>
       <startindex>0</startindex>
-      <fulltext>基础数据</fulltext>
+      <fulltext>基础数据: 2012年03月31日 事件：天威视讯公告称拟通过增发股票方式以13亿元收购深圳关外地区有线电视运营商天宝存续公司、天隆存续公司100%股权;增发价格拟定为17.25元/股，计划发行7600万股，发行完成后总股本将达到3</fulltext>
       <openmark />
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>4</startindex>
-      <fulltext>: 2012年03月31日 事件</fulltext>
-      <openmark>:</openmark>
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>20</startindex>
-      <fulltext>：天威视讯公告称拟通过增发股票方式以13亿元收购深圳关外地区有线电视运营商天宝存续公司、天隆存续公司100%股权</fulltext>
-      <openmark>：</openmark>
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>76</startindex>
-      <fulltext>;增发价格拟定为17</fulltext>
-      <openmark>;</openmark>
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>86</startindex>
-      <fulltext>.25元/股</fulltext>
-      <openmark>.</openmark>
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>92</startindex>
-      <fulltext>，计划发行7600万股</fulltext>
-      <openmark>，</openmark>
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>103</startindex>
-      <fulltext>，发行完成后总股本将达到3</fulltext>
-      <openmark>，</openmark>
       <closemark />
     </segments>
     <segments>
@@ -5089,14 +4327,8 @@
     <text>2012年4月26日，仁和药业拟出资2.88亿元收购江西药都医药集团持有的江西药都樟树制药有限公司和江西药都药业有限公司两公司100%股权。</text>
     <segments>
       <startindex>0</startindex>
-      <fulltext>2012年4月26日</fulltext>
+      <fulltext>2012年4月26日，仁和药业拟出资2</fulltext>
       <openmark />
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>10</startindex>
-      <fulltext>，仁和药业拟出资2</fulltext>
-      <openmark>，</openmark>
       <closemark />
     </segments>
     <segments>
@@ -5110,26 +4342,8 @@
     <text>昨日，石家庄联邦伟业房地产开发集团有限公司(下称“联邦地产”)与长城国富置业有限公司在上海举行大西洋百货有限公司股东变更交接仪式,联邦地产斥资3.6亿元完成对大西洋百货100%股权的收购。</text>
     <segments>
       <startindex>0</startindex>
-      <fulltext>昨日</fulltext>
+      <fulltext>昨日，石家庄联邦伟业房地产开发集团有限公司(下称“联邦地产”)与长城国富置业有限公司在上海举行大西洋百货有限公司股东变更交接仪式,联邦地产斥资3</fulltext>
       <openmark />
-      <closemark />
-    </segments>
-    <segments>
-      <startindex>2</startindex>
-      <fulltext>，石家庄联邦伟业房地产开发集团有限公司(下称“联邦地产”)与长城国富置业有限公司在上海举行大西洋百货有限公司股东变更交接仪式</fulltext>
-      <openmark>，</openmark>
-      <closemark />
-      <child>
-        <startindex>19</startindex>
-        <fulltext>(下称“联邦地产”)</fulltext>
-        <openmark>(</openmark>
-        <closemark>)</closemark>
-      </child>
-    </segments>
-    <segments>
-      <startindex>64</startindex>
-      <fulltext>,联邦地产斥资3</fulltext>
-      <openmark>,</openmark>
       <closemark />
     </segments>
     <segments>
@@ -5141,6 +4355,521 @@
   </testcase>
   <testcase>
     <text>近日，记者从华新水泥董事会公告获悉，华新水泥拟于2012年从万源市政府处收购万源大巴山水泥100%股权，完成对该公司的全部控股。</text>
+    <segments>
+      <startindex>0</startindex>
+      <fulltext>近日</fulltext>
+      <openmark />
+      <closemark />
+    </segments>
+    <segments>
+      <startindex>2</startindex>
+      <fulltext>，记者从华新水泥董事会公告获悉</fulltext>
+      <openmark>，</openmark>
+      <closemark />
+    </segments>
+    <segments>
+      <startindex>17</startindex>
+      <fulltext>，华新水泥拟于2012年从万源市政府处收购万源大巴山水泥100%股权</fulltext>
+      <openmark>，</openmark>
+      <closemark />
+    </segments>
+    <segments>
+      <startindex>51</startindex>
+      <fulltext>，完成对该公司的全部控股</fulltext>
+      <openmark>，</openmark>
+      <closemark />
+    </segments>
+  </testcase>
+  <testcase>
+    <text>联环药业(600513)1月11日晚间公告称，日前，接公司大股东江苏联环药业集团有限公司通知，根据《关于企业国有产权协议转让有关事项的通知》，公司酝酿以自有资金收购扬州制药有限公司100%股权的方案需进一步研究及调整。</text>
+    <segments>
+      <startindex>0</startindex>
+      <fulltext>联环药业(600513)1月11日晚间公告称</fulltext>
+      <openmark />
+      <closemark />
+      <child>
+        <startindex>4</startindex>
+        <fulltext>(600513)</fulltext>
+        <openmark>(</openmark>
+        <closemark>)</closemark>
+      </child>
+    </segments>
+    <segments>
+      <startindex>22</startindex>
+      <fulltext>，日前</fulltext>
+      <openmark>，</openmark>
+      <closemark />
+    </segments>
+    <segments>
+      <startindex>25</startindex>
+      <fulltext>，接公司大股东江苏联环药业集团有限公司通知</fulltext>
+      <openmark>，</openmark>
+      <closemark />
+    </segments>
+    <segments>
+      <startindex>46</startindex>
+      <fulltext>，根据《关于企业国有产权协议转让有关事项的通知》</fulltext>
+      <openmark>，</openmark>
+      <closemark />
+      <child>
+        <startindex>3</startindex>
+        <fulltext>《关于企业国有产权协议转让有关事项的通知》</fulltext>
+        <openmark>《</openmark>
+        <closemark>》</closemark>
+      </child>
+    </segments>
+    <segments>
+      <startindex>70</startindex>
+      <fulltext>，公司酝酿以自有资金收购扬州制药有限公司100%股权的方案需进一步研究及调整</fulltext>
+      <openmark>，</openmark>
+      <closemark />
+    </segments>
+  </testcase>
+  <testcase>
+    <text>力生制药今日公告，拟使用超募资金4.35亿元、募集资金和超募资金利息收入6568.71万元，合计5.01亿元收购中央药业100%股权，公司控股股东天津市医药集团有限公司持有其49%股权，天药集团旗下另一家上市公司中新药业（600329）则持有其51%股权。</text>
+    <segments>
+      <startindex>0</startindex>
+      <fulltext>力生制药今日公告，拟使用超募资金4.35亿元、募集资金和超募资金利息收入6568.71万元，合计5</fulltext>
+      <openmark />
+      <closemark />
+    </segments>
+    <segments>
+      <startindex>49</startindex>
+      <fulltext>.01亿元收购中央药业100%股权</fulltext>
+      <openmark>.</openmark>
+      <closemark />
+    </segments>
+    <segments>
+      <startindex>66</startindex>
+      <fulltext>，公司控股股东天津市医药集团有限公司持有其49%股权</fulltext>
+      <openmark>，</openmark>
+      <closemark />
+    </segments>
+    <segments>
+      <startindex>92</startindex>
+      <fulltext>，天药集团旗下另一家上市公司中新药业（600329）则持有其51%股权</fulltext>
+      <openmark>，</openmark>
+      <closemark />
+      <child>
+        <startindex>18</startindex>
+        <fulltext>（600329）</fulltext>
+        <openmark>（</openmark>
+        <closemark>）</closemark>
+      </child>
+    </segments>
+  </testcase>
+  <testcase>
+    <text>中粮生化子公司2000万收购润泰生化100%股权2012年03月16日 20:39</text>
+    <segments>
+      <startindex>0</startindex>
+      <fulltext>中粮生化子公司2000万收购润泰生化100%股权2012年03月16日 20</fulltext>
+      <openmark />
+      <closemark />
+    </segments>
+    <segments>
+      <startindex>38</startindex>
+      <fulltext>:39</fulltext>
+      <openmark>:</openmark>
+      <closemark />
+    </segments>
+  </testcase>
+  <testcase>
+    <text>顺网科技4月13日公告：公司拟8000万收购盛大旗下成都吉胜100%股权。</text>
+    <segments>
+      <startindex>0</startindex>
+      <fulltext>顺网科技4月13日公告</fulltext>
+      <openmark />
+      <closemark />
+    </segments>
+    <segments>
+      <startindex>11</startindex>
+      <fulltext>：公司拟8000万收购盛大旗下成都吉胜100%股权</fulltext>
+      <openmark>：</openmark>
+      <closemark />
+    </segments>
+  </testcase>
+  <testcase>
+    <text>恒瑞医药(600276,股吧)（600276）2月10日晚间公告，公司今日收购北京恒森创新医药科技有限公司100%股权，股权收购价款为85万元人民币。</text>
+    <segments>
+      <startindex>0</startindex>
+      <fulltext>恒瑞医药(600276,股吧)（600276）2月10日晚间公告</fulltext>
+      <openmark />
+      <closemark />
+      <child>
+        <startindex>4</startindex>
+        <fulltext>(600276,股吧)</fulltext>
+        <openmark>(</openmark>
+        <closemark>)</closemark>
+        <child>
+          <startindex>0</startindex>
+          <fulltext>600276</fulltext>
+          <openmark />
+          <closemark />
+        </child>
+        <child>
+          <startindex>6</startindex>
+          <fulltext>,股吧</fulltext>
+          <openmark>,</openmark>
+          <closemark />
+        </child>
+      </child>
+      <child>
+        <startindex>15</startindex>
+        <fulltext>（600276）</fulltext>
+        <openmark>（</openmark>
+        <closemark>）</closemark>
+      </child>
+    </segments>
+    <segments>
+      <startindex>32</startindex>
+      <fulltext>，公司今日收购北京恒森创新医药科技有限公司100%股权</fulltext>
+      <openmark>，</openmark>
+      <closemark />
+    </segments>
+    <segments>
+      <startindex>59</startindex>
+      <fulltext>，股权收购价款为85万元人民币</fulltext>
+      <openmark>，</openmark>
+      <closemark />
+    </segments>
+  </testcase>
+  <testcase>
+    <text>此次，石家庄联邦伟业房地产开发集团有限公司力排22家强有力的竞争对手，在激烈的角逐中斥资3.6亿元完成了对上海大西洋百货有限公司100%股权的收购，成功进驻上海百货商业市场。</text>
+    <segments>
+      <startindex>0</startindex>
+      <fulltext>此次，石家庄联邦伟业房地产开发集团有限公司力排22家强有力的竞争对手，在激烈的角逐中斥资3</fulltext>
+      <openmark />
+      <closemark />
+    </segments>
+    <segments>
+      <startindex>45</startindex>
+      <fulltext>.6亿元完成了对上海大西洋百货有限公司100%股权的收购</fulltext>
+      <openmark>.</openmark>
+      <closemark />
+    </segments>
+    <segments>
+      <startindex>73</startindex>
+      <fulltext>，成功进驻上海百货商业市场</fulltext>
+      <openmark>，</openmark>
+      <closemark />
+    </segments>
+  </testcase>
+  <testcase>
+    <text>）（300128）12月14日晚间公告称，鉴于液晶显示行业良好发展前景，为满足市场导光板产品的需求，提升公司产品市场份额，公司全资子公司苏州蓝思科技发展有限公司拟以其自有资金收购苏州新硕特光电有限公司100%股权并对其增加注册资本，以满足扩大产能以及开发新产品的需求。</text>
+    <segments>
+      <startindex>0</startindex>
+      <fulltext>）（300128）12月14日晚间公告称</fulltext>
+      <openmark />
+      <closemark />
+      <child>
+        <startindex>1</startindex>
+        <fulltext>（300128）</fulltext>
+        <openmark>（</openmark>
+        <closemark>）</closemark>
+      </child>
+    </segments>
+    <segments>
+      <startindex>20</startindex>
+      <fulltext>，鉴于液晶显示行业良好发展前景</fulltext>
+      <openmark>，</openmark>
+      <closemark />
+    </segments>
+    <segments>
+      <startindex>35</startindex>
+      <fulltext>，为满足市场导光板产品的需求</fulltext>
+      <openmark>，</openmark>
+      <closemark />
+    </segments>
+    <segments>
+      <startindex>49</startindex>
+      <fulltext>，提升公司产品市场份额</fulltext>
+      <openmark>，</openmark>
+      <closemark />
+    </segments>
+    <segments>
+      <startindex>60</startindex>
+      <fulltext>，公司全资子公司苏州蓝思科技发展有限公司拟以其自有资金收购苏州新硕特光电有限公司100%股权并对其增加注册资本</fulltext>
+      <openmark>，</openmark>
+      <closemark />
+    </segments>
+    <segments>
+      <startindex>115</startindex>
+      <fulltext>，以满足扩大产能以及开发新产品的需求</fulltext>
+      <openmark>，</openmark>
+      <closemark />
+    </segments>
+  </testcase>
+  <testcase>
+    <text>网易财经9月27日讯中国软件周一晚间发布公告称，公司子公司中国计算机软件与技术服务（香港）有限公司之子公司中软国际有限公司9月22日与卖方等相关方面签署了《股份收购协议》，拟有条件收购掌中无限控股有限公司100%股权。</text>
+    <segments>
+      <startindex>0</startindex>
+      <fulltext>网易财经9月27日讯中国软件周一晚间发布公告称</fulltext>
+      <openmark />
+      <closemark />
+    </segments>
+    <segments>
+      <startindex>23</startindex>
+      <fulltext>，公司子公司中国计算机软件与技术服务（香港）有限公司之子公司中软国际有限公司9月22日与卖方等相关方面签署了《股份收购协议》</fulltext>
+      <openmark>，</openmark>
+      <closemark />
+      <child>
+        <startindex>18</startindex>
+        <fulltext>（香港）</fulltext>
+        <openmark>（</openmark>
+        <closemark>）</closemark>
+      </child>
+      <child>
+        <startindex>54</startindex>
+        <fulltext>《股份收购协议》</fulltext>
+        <openmark>《</openmark>
+        <closemark>》</closemark>
+      </child>
+    </segments>
+    <segments>
+      <startindex>85</startindex>
+      <fulltext>，拟有条件收购掌中无限控股有限公司100%股权</fulltext>
+      <openmark>，</openmark>
+      <closemark />
+    </segments>
+  </testcase>
+  <testcase>
+    <text>2009年12月16日公司公告了对集团新景矿的资产收购决议，公司拟以自有资金收购集团子公司新景矿100%股权，对应收购产能为580万吨，相应净资产作价将在12月25日左右明确。</text>
+    <segments>
+      <startindex>0</startindex>
+      <fulltext>2009年12月16日公司公告了对集团新景矿的资产收购决议</fulltext>
+      <openmark />
+      <closemark />
+    </segments>
+    <segments>
+      <startindex>29</startindex>
+      <fulltext>，公司拟以自有资金收购集团子公司新景矿100%股权</fulltext>
+      <openmark>，</openmark>
+      <closemark />
+    </segments>
+    <segments>
+      <startindex>54</startindex>
+      <fulltext>，对应收购产能为580万吨</fulltext>
+      <openmark>，</openmark>
+      <closemark />
+    </segments>
+    <segments>
+      <startindex>67</startindex>
+      <fulltext>，相应净资产作价将在12月25日左右明确</fulltext>
+      <openmark>，</openmark>
+      <closemark />
+    </segments>
+  </testcase>
+  <testcase>
+    <text>一、会议审议通过了《关于天虹商场股份有限公司收购厦门君尚世纪投资有限公司 100%股权的议案》</text>
+    <segments>
+      <startindex>0</startindex>
+      <fulltext>一、会议审议通过了《关于天虹商场股份有限公司收购厦门君尚世纪投资有限公司 100%股权的议案》</fulltext>
+      <openmark />
+      <closemark />
+      <child>
+        <startindex>9</startindex>
+        <fulltext>《关于天虹商场股份有限公司收购厦门君尚世纪投资有限公司 100%股权的议案》</fulltext>
+        <openmark>《</openmark>
+        <closemark>》</closemark>
+      </child>
+    </segments>
+  </testcase>
+  <testcase>
+    <text>中捷缝纫机股份有限公司关于收购禧利多矿业100%股权工商登记事项的公告</text>
+    <segments>
+      <startindex>0</startindex>
+      <fulltext>中捷缝纫机股份有限公司关于收购禧利多矿业100%股权工商登记事项的公告</fulltext>
+      <openmark />
+      <closemark />
+    </segments>
+  </testcase>
+  <testcase>
+    <text>网易财经5月27日报道 如家酒店集团（HMIN，NASDAQ)27日下午紧急召开发布会，正式宣布已签署4.7亿美金收购莫泰168国际控股公司（以下简称“莫泰168”）100%股权的协议。</text>
+    <segments>
+      <startindex>0</startindex>
+      <fulltext>网易财经5月27日报道 如家酒店集团（HMIN，NASDAQ)27日下午紧急召开发布会，正式宣布已签署4</fulltext>
+      <openmark />
+      <closemark />
+    </segments>
+    <segments>
+      <startindex>52</startindex>
+      <fulltext>.7亿美金收购莫泰168国际控股公司（以下简称“莫泰168”）100%股权的协议</fulltext>
+      <openmark>.</openmark>
+      <closemark />
+      <child>
+        <startindex>18</startindex>
+        <fulltext>（以下简称“莫泰168”）</fulltext>
+        <openmark>（</openmark>
+        <closemark>）</closemark>
+      </child>
+    </segments>
+  </testcase>
+  <testcase>
+    <text>河北钢铁昨日晚间公告称,公司接到河北钢铁集团有限公司的通知,根据河北省国资委出具的批复,同意公司公开发行A股股份募集资金用于收购邯郸钢铁(600001,股吧)集团有限责任公司所持邯钢集团邯宝钢铁有限公司100%股权。</text>
+    <segments>
+      <startindex>0</startindex>
+      <fulltext>河北钢铁昨日晚间公告称</fulltext>
+      <openmark />
+      <closemark />
+    </segments>
+    <segments>
+      <startindex>11</startindex>
+      <fulltext>,公司接到河北钢铁集团有限公司的通知</fulltext>
+      <openmark>,</openmark>
+      <closemark />
+    </segments>
+    <segments>
+      <startindex>29</startindex>
+      <fulltext>,根据河北省国资委出具的批复</fulltext>
+      <openmark>,</openmark>
+      <closemark />
+    </segments>
+    <segments>
+      <startindex>43</startindex>
+      <fulltext>,同意公司公开发行A股股份募集资金用于收购邯郸钢铁(600001,股吧)集团有限责任公司所持邯钢集团邯宝钢铁有限公司100%股权</fulltext>
+      <openmark>,</openmark>
+      <closemark />
+      <child>
+        <startindex>25</startindex>
+        <fulltext>(600001,股吧)</fulltext>
+        <openmark>(</openmark>
+        <closemark>)</closemark>
+        <child>
+          <startindex>0</startindex>
+          <fulltext>600001</fulltext>
+          <openmark />
+          <closemark />
+        </child>
+        <child>
+          <startindex>6</startindex>
+          <fulltext>,股吧</fulltext>
+          <openmark>,</openmark>
+          <closemark />
+        </child>
+      </child>
+    </segments>
+  </testcase>
+  <testcase>
+    <text>今日公告显示，7月28日，金融街董事会审议通过收购德胜公司100%股权的议案，批准金融街参加对北京华融综合投资公司持有德胜公司99%股权的挂牌出让，以及参加对北京金昊房地产开发有限公司持有德胜公司1%股权的挂牌出让。</text>
+    <segments>
+      <startindex>0</startindex>
+      <fulltext>今日公告显示</fulltext>
+      <openmark />
+      <closemark />
+    </segments>
+    <segments>
+      <startindex>6</startindex>
+      <fulltext>，7月28日</fulltext>
+      <openmark>，</openmark>
+      <closemark />
+    </segments>
+    <segments>
+      <startindex>12</startindex>
+      <fulltext>，金融街董事会审议通过收购德胜公司100%股权的议案</fulltext>
+      <openmark>，</openmark>
+      <closemark />
+    </segments>
+    <segments>
+      <startindex>38</startindex>
+      <fulltext>，批准金融街参加对北京华融综合投资公司持有德胜公司99%股权的挂牌出让</fulltext>
+      <openmark>，</openmark>
+      <closemark />
+    </segments>
+    <segments>
+      <startindex>73</startindex>
+      <fulltext>，以及参加对北京金昊房地产开发有限公司持有德胜公司1%股权的挂牌出让</fulltext>
+      <openmark>，</openmark>
+      <closemark />
+    </segments>
+  </testcase>
+  <testcase>
+    <text>导读：2012年3月16日，桂林广陆数字测控股份有限公司与上海电气(集团)总公司上海联合产权产易所签订了《上海市产权交易合同》，收购上海电气所持的上海量具刃具厂有限公司(以下简称“上量公司”)100%股权及1001.535263万元债权。</text>
+    <segments>
+      <startindex>0</startindex>
+      <fulltext>导读：2012年3月16日，桂林广陆数字测控股份有限公司与上海电气(集团)总公司上海联合产权产易所签订了《上海市产权交易合同》，收购上海电气所持的上海量具刃具厂有限公司(以下简称“上量公司”)100%股权及1001</fulltext>
+      <openmark />
+      <closemark />
+    </segments>
+    <segments>
+      <startindex>107</startindex>
+      <fulltext>.535263万元债权</fulltext>
+      <openmark>.</openmark>
+      <closemark />
+    </segments>
+  </testcase>
+  <testcase>
+    <text>青岛海尔股份有限公司发布公告称，其控股子公司海尔电器集团有限公司2.4亿元收购海尔集团公司持有的青岛日日顺电器服务有限公司100%股权。</text>
+    <segments>
+      <startindex>0</startindex>
+      <fulltext>青岛海尔股份有限公司发布公告称，其控股子公司海尔电器集团有限公司2</fulltext>
+      <openmark />
+      <closemark />
+    </segments>
+    <segments>
+      <startindex>33</startindex>
+      <fulltext>.4亿元收购海尔集团公司持有的青岛日日顺电器服务有限公司100%股权</fulltext>
+      <openmark>.</openmark>
+      <closemark />
+    </segments>
+  </testcase>
+  <testcase>
+    <text>兴发集团：收购磷化公司100%股权,公司磷矿石储量大幅提升-研报频道-和讯网</text>
+    <segments>
+      <startindex>0</startindex>
+      <fulltext>兴发集团</fulltext>
+      <openmark />
+      <closemark />
+    </segments>
+    <segments>
+      <startindex>4</startindex>
+      <fulltext>：收购磷化公司100%股权</fulltext>
+      <openmark>：</openmark>
+      <closemark />
+    </segments>
+    <segments>
+      <startindex>17</startindex>
+      <fulltext>,公司磷矿石储量大幅提升-研报频道-和讯网</fulltext>
+      <openmark>,</openmark>
+      <closemark />
+    </segments>
+  </testcase>
+  <testcase>
+    <text>科大智能5月20日晚间公告，公司将收购力诺电气100%股权，该部分股权的预估值为1.28亿元，较其账面净资产值1718万元增值率647.18%。</text>
+    <segments>
+      <startindex>0</startindex>
+      <fulltext>科大智能5月20日晚间公告，公司将收购力诺电气100%股权，该部分股权的预估值为1.28亿元，较其账面净资产值1718万元增值率647</fulltext>
+      <openmark />
+      <closemark />
+    </segments>
+    <segments>
+      <startindex>67</startindex>
+      <fulltext>.18%</fulltext>
+      <openmark>.</openmark>
+      <closemark />
+    </segments>
+  </testcase>
+  <testcase>
+    <text>福瑞股份：关于境外全资子公司法国Echosens公司完成收购法国BioLiveScale公司100%股权的公告_福瑞股份(300049)_公告正文_财经_凤凰网</text>
+    <segments>
+      <startindex>0</startindex>
+      <fulltext>福瑞股份</fulltext>
+      <openmark />
+      <closemark />
+    </segments>
+    <segments>
+      <startindex>4</startindex>
+      <fulltext>：关于境外全资子公司法国Echosens公司完成收购法国BioLiveScale公司100%股权的公告_福瑞股份(300049)_公告正文_财经_凤凰网</fulltext>
+      <openmark>：</openmark>
+      <closemark />
+      <child>
+        <startindex>56</startindex>
+        <fulltext>(300049)</fulltext>
+        <openmark>(</openmark>
+        <closemark>)</closemark>
+      </child>
+    </segments>
+  </testcase>
+</testcases>��，完成对该公司的全部控股。</text>
     <segments>
       <startindex>0</startindex>
       <fulltext>近日</fulltext>
