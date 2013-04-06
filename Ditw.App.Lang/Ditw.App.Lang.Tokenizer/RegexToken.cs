@@ -25,11 +25,11 @@ namespace Ditw.App.Lang.Tokenizer
         }
     }
 
-    [XmlRoot("regextoken")]
-    public class RegexTokenXml
+    [XmlRoot("regexgroup")]
+    public class RegexGroup
     {
-        [XmlAttribute]
-        public String Id
+        [XmlAttribute("name")]
+        public String Name
         {
             get;
             set;
@@ -37,6 +37,24 @@ namespace Ditw.App.Lang.Tokenizer
 
         [XmlElement("regex")]
         public RegexXml[] Regexes
+        {
+            get;
+            set;
+        }
+    }
+
+    [XmlRoot("regextokens")]
+    public class RegexTokenXml
+    {
+        [XmlAttribute("id")]
+        public String Id
+        {
+            get;
+            set;
+        }
+
+        [XmlElement("regexgroup")]
+        public RegexGroup[] RegexGroups
         {
             get;
             set;
@@ -78,16 +96,22 @@ namespace Ditw.App.Lang.Tokenizer
                 {
                     if (_regexes == null)
                     {
-                        _regexes = new Regex[Regexes.Length];
-                        _regexMapping = new Dictionary<String, String>(Regexes.Length);
-                        for (Int32 i = 0; i < Regexes.Length; i++)
+                        Int32 regexCount = RegexGroups.Sum(rg => rg.Regexes.Length);
+                        _regexes = new Regex[regexCount];
+                        _regexMapping = new Dictionary<String, String>(regexCount);
+                        Int32 regexIndex = 0;
+                        for (Int32 i = 0; i < RegexGroups.Length; i++)
                         {
-                            Regexes[i].Expr = ReplaceVariables(Regexes[i].Expr);
-                            if (!String.IsNullOrEmpty(Regexes[i].Id))
+                            var groupi = RegexGroups[i];
+                            for (Int32 j = 0; j < groupi.Regexes.Length; j++)
                             {
-                                _regexMapping.Add(Regexes[i].Id, Regexes[i].Expr);
+                                groupi.Regexes[j].Expr = ReplaceVariables(groupi.Regexes[j].Expr);
+                                if (!String.IsNullOrEmpty(groupi.Regexes[j].Id))
+                                {
+                                    _regexMapping.Add(groupi.Regexes[j].Id, groupi.Regexes[j].Expr);
+                                }
+                                _regexes[regexIndex++] = new Regex(groupi.Regexes[j].Expr);
                             }
-                            _regexes[i] = new Regex(Regexes[i].Expr);
                         }
                     }
                 }

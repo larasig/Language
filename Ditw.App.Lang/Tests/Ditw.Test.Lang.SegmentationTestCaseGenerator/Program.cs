@@ -25,16 +25,30 @@ namespace Ditw.Test.Lang.SegmentationTestCaseGenerator
             }
         }
 
-        const String regextest = @"<regextoken Id=""n"">
-<regex><![CDATA[\d*\.\d+]]></regex>
-<regex><![CDATA[\d+]]></regex>
-<regex id=""date""><![CDATA[\d+日]]></regex>
-<regex id=""month""><![CDATA[\d+月]]></regex>
-<regex id=""year""><![CDATA[\d+年]]></regex>
-<regex><![CDATA[{{year}}{{month}}]]></regex>
-<regex><![CDATA[{{month}}{{date}}]]></regex>
-<regex><![CDATA[{{year}}{{month}}{{date}}]]></regex>
-</regextoken>";
+        const String regextest = @"<regextokens id=""n"">
+  <regexgroup name=""Digits-G"">
+    <regex id=""decimal""><![CDATA[\d*\.\d+]]></regex>
+    <regex id=""integer""><![CDATA[\d+]]></regex>
+    <regex id=""number""><![CDATA[{{decimal}}|{{integer}}]]></regex>
+    <regex id=""numberX""><![CDATA[{{number}}[%]]]></regex>
+  </regexgroup>
+  <regexgroup name=""Digits-ZHS"">
+    <regex id=""zhs-quantity""><![CDATA[(艘|吨)]]></regex>
+    <regex id=""zhs-number-suffix""><![CDATA[(万|亿)]]></regex>
+    <regex id=""zhs-currency""><![CDATA[(元|美元|日元|欧元|美分|港元)]]></regex>
+    <regex id=""numberX-zhs""><![CDATA[{{number}}{{zhs-number-suffix}}]]></regex>
+    <regex id=""numberXU-zhs""><![CDATA[{{number}}{{zhs-quantity}}]]></regex>
+    <regex id=""numberXM-zhs""><![CDATA[({{numberX-zhs}}|{{number}}){{zhs-currency}}]]></regex>
+  </regexgroup>
+  <regexgroup name=""DateTime-ZHS"">
+    <regex id=""date""><![CDATA[\d+日]]></regex>
+    <regex id=""month""><![CDATA[\d+月]]></regex>
+    <regex id=""year""><![CDATA[\d+年]]></regex>
+    <regex><![CDATA[{{year}}{{month}}]]></regex>
+    <regex><![CDATA[{{month}}{{date}}]]></regex>
+    <regex><![CDATA[{{year}}{{month}}{{date}}]]></regex>
+  </regexgroup>
+</regextokens>";
         static SegmentationTestCases _testCases;
         static void Main(string[] args)
         {
