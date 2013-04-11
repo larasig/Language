@@ -25,6 +25,51 @@ namespace Ditw.Test.Lang.SegmentationTestCaseGenerator
             }
         }
 
+        const String regexMalware = @"<regextokens id=""malware"">
+  <regexgroup name=""Digits-G"">
+    <regex id=""integer""><![CDATA[\d+(,\d{3})*]]></regex>
+    <regex id=""decimal""><![CDATA[\d*\.\d+]]></regex>
+    <regex id=""number""><![CDATA[{{decimal}}|{{integer}}]]></regex>
+    <regex id=""numberX""><![CDATA[{{number}}[%]]]></regex>
+  </regexgroup>
+  <regexgroup name=""Software"">
+    <regex id=""OS-Software""><![CDATA[(NetWare|Windows Phone|Windows|Linux|iOS|BlackBerry|Symbian|Mac OS X|Mac OSX|Mac OS|OS X|Mac|Unix|UNIX|Android)]]></regex>
+    <regex id=""App-Software""><![CDATA[(IE|Java)]]></regex>
+    <regex id=""Version""><![CDATA[\d+(\.\d+)*]]></regex>
+    <regex id=""Version-List""><![CDATA[{{Version}}(,\s*{{Version}})*]]></regex>
+    <regex id=""Software""><![CDATA[{{OS-Software}}|{{App-Software}}]]></regex>
+    <regex id=""Software-V""><![CDATA[({{OS-Software}}|{{App-Software}})\s+{{Version-List}}]]></regex>
+    <regex id=""Software-List""><![CDATA[{{Software}}(\s*,\s*{{Software}})*\s*(and|,)\s*{{Software}}]]></regex>
+    <regex id=""Software-List-Malware""><![CDATA[{{Software-List}}\s*malware]]></regex>
+  </regexgroup>
+</regextokens>";
+
+        const String malwareExtract_old = @"<regextokens id=""malwareEx"">
+  <regexgroup name=""keywords"">
+    <regex id=""name1""><![CDATA[[A-Z]\w*(\s+[A-Z]\w*)*]]></regex>
+    <regex id=""name2""><![CDATA[""[^""]*""]]></regex>
+    <regex id=""name3""><![CDATA['[^']*']]></regex>
+    <regex id=""name""><![CDATA[{{name1}}|{{name2}}|{{name3}}]]></regex>
+    <regex id=""called""><![CDATA[(known as|called|named|codenamed|dubbed)]]></regex>
+    <regex id=""keywords""><![CDATA[(hacker group|malware|group|hacker)]]></regex>
+    <regex id=""named"" isInternal=""0""><![CDATA[{{called}}(\s+\w+){0,1}\s+{{name}}]]></regex>
+    <regex id=""pattern"" isInternal=""0""><![CDATA[{{keywords}}.*{{named}}]]></regex>
+    <regex id=""botnet"" isInternal=""0""><![CDATA[{{name}}\s+botnet]]></regex>
+  </regexgroup>
+</regextokens>";
+
+        const String malwareExtract = @"<regextokens id=""malwareEx"">
+  <regexgroup name=""keywords"">
+    <regex id=""name1""><![CDATA[[A-Z]\w*(\s+[A-Z]\w*)*]]></regex>
+    <regex id=""name2""><![CDATA[""[^""]*""]]></regex>
+    <regex id=""name""><![CDATA[{{name1}}|{{name2}}]]></regex>
+    <regex id=""called""><![CDATA[(known as|called|named|codenamed|dubbed)]]></regex>
+    <regex id=""keywords""><![CDATA[(hacker group|malware|group|hacker)]]></regex>
+    <regex id=""named"" isInternal=""0""><![CDATA[{{called}}(\s+\w+){0,1}\s+{{name}}]]></regex>
+    <regex id=""pattern"" isInternal=""0""><![CDATA[{{keywords}}.*{{named}}]]></regex>
+  </regexgroup>
+</regextokens>";
+
         const String regextest = @"<regextokens id=""n"">
   <regexgroup name=""Digits-G"">
     <regex id=""decimal""><![CDATA[\d*\.\d+]]></regex>
@@ -65,17 +110,38 @@ namespace Ditw.Test.Lang.SegmentationTestCaseGenerator
 
             _testCases = new SegmentationTestCases();
             _testCases.TestCases = new List<SegmentationTestCase>();
-            RFTestCases(@"zhs_acquire_all.xml", RFTestCase_Test1); //RFTestCase_Segmentation); //RFTestCase_ZHS_PolRel);
+
+            //RFTestCases(@"zhs_acquire_all.xml", RFTestCase_Test1); //RFTestCase_Segmentation); //RFTestCase_ZHS_PolRel);
+            //RFTestCases(@"malware_threat_product.xml", RFTestCase_Malware1);
+            //RFTestCases(@"malware_threat_sentences.xml", RFTestCase_Malware2);//RFTestCase_Malware1);
+            RFTestCases(@"malware_threat_product.xml", RFTestCase_Malware2);//RFTestCase_Malware1);
 
             //XmlUtil.Serialize(_testCases, _pathToRFTestCaseFiles + @"\segmentation_test.xml");
 			
 			Console.Write("Press any key to continue . . . ");
 			Console.ReadKey(true);
         }
+
+        static void RFTestCase_Malware1(EvtXTest testCase)
+        {
+            RFTestCase_Regex(testCase, regexMalware);
+        }
+
+        static void RFTestCase_Malware2(EvtXTest testCase)
+        {
+            //testCase.Sentence = @"'Kneber' Botnet Attacks PCs Worldwide: FAQ";
+            RFTestCase_Regex(testCase, malwareExtract);
+        }
+
         static void RFTestCase_Test1(EvtXTest testCase)
         {
+            RFTestCase_Regex(testCase, regextest);
+        }
+
+        static void RFTestCase_Regex(EvtXTest testCase, String regex)
+        {
             RegexToken rt = new RegexToken();
-            rt.Xml = XmlUtil.DeserializeString<RegexTokenXml>(regextest);
+            rt.Xml = XmlUtil.DeserializeString<RegexTokenXml>(regex);
             String tmp = testCase.Sentence; //"而且，花旗银行还开出7.7亿美元收购仁川炼油公司的价格，比中化集团的5.6亿美元高出2.2亿美元，超出了中化集团的承受能力，最终导致了并购失败。";
             BasicTextSegment bts = new BasicTextSegment(
                 tmp, 0, tmp.Length);

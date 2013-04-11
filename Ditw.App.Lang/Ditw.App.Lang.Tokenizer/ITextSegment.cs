@@ -33,6 +33,11 @@ namespace Ditw.App.Lang.Tokenizer
             get;
         }
 
+        Boolean IsInternal
+        {
+            get;
+        }
+
         IList<ITextSegment> Decompose();
 
         #region DEBUG
@@ -109,8 +114,17 @@ namespace Ditw.App.Lang.Tokenizer
             }
             else
             {
-                Trace.WriteLine(Text);
+                if (!IsInternal)
+                {
+                    Trace.WriteLine(Text);
+                }
             }
+        }
+
+
+        public virtual bool IsInternal
+        {
+            get { return true; }
         }
     }
 

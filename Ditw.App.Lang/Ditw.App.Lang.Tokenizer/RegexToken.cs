@@ -17,11 +17,39 @@ namespace Ditw.App.Lang.Tokenizer
             set;
         }
 
-        [XmlText]
-        public String Expr
+        [XmlAttribute("isInternal")]
+        public String _IsInternal
         {
             get;
             set;
+        }
+
+        [XmlIgnore]
+        public Boolean IsInternal
+        {
+            get
+            {
+                return "0" != _IsInternal;
+            }
+        }
+
+        [XmlText]
+        public String ExprText
+        {
+            get;
+            set;
+        }
+
+        [XmlIgnore]
+        private Regex _expr;
+        public Regex Expr
+        {
+            get { return _expr; }
+        }
+
+        internal void InitializeRegex()
+        {
+            _expr = new Regex(ExprText);
         }
     }
 
@@ -61,7 +89,8 @@ namespace Ditw.App.Lang.Tokenizer
         }
 
         #region reg expression
-        private Regex[] _regexes;
+        private RegexXml[] _regexes;
+        //private Boolean _initilized = false;
         private Object _lock = new Object();
         private Dictionary<String, String> _regexMapping;
         private static readonly Regex _VariablePattern = new Regex(@"\{\{([^{}]*)}}");
@@ -97,7 +126,7 @@ namespace Ditw.App.Lang.Tokenizer
                     if (_regexes == null)
                     {
                         Int32 regexCount = RegexGroups.Sum(rg => rg.Regexes.Length);
-                        _regexes = new Regex[regexCount];
+                        _regexes = new RegexXml[regexCount];
                         _regexMapping = new Dictionary<String, String>(regexCount);
                         Int32 regexIndex = 0;
                         for (Int32 i = 0; i < RegexGroups.Length; i++)
@@ -105,21 +134,24 @@ namespace Ditw.App.Lang.Tokenizer
                             var groupi = RegexGroups[i];
                             for (Int32 j = 0; j < groupi.Regexes.Length; j++)
                             {
-                                groupi.Regexes[j].Expr = ReplaceVariables(groupi.Regexes[j].Expr);
+                                groupi.Regexes[j].ExprText = ReplaceVariables(groupi.Regexes[j].ExprText);
                                 if (!String.IsNullOrEmpty(groupi.Regexes[j].Id))
                                 {
-                                    _regexMapping.Add(groupi.Regexes[j].Id, groupi.Regexes[j].Expr);
+                                    _regexMapping.Add(groupi.Regexes[j].Id, groupi.Regexes[j].ExprText);
                                 }
-                                _regexes[regexIndex++] = new Regex(groupi.Regexes[j].Expr);
+                                groupi.Regexes[j].InitializeRegex();
+                                _regexes[regexIndex++] = groupi.Regexes[j];
                             }
                         }
+
+                        //_initilized = true;
                     }
                 }
             }
         }
 
         [XmlIgnore]
-        public Regex[] RegexArray
+        public RegexXml[] RegexArray
         {
             get
             {
@@ -137,12 +169,28 @@ namespace Ditw.App.Lang.Tokenizer
 
     public class RegexMatchSegment : BasicTextSegment
     {
+        public RegexXml RegexDef
+        {
+            get;
+            private set;
+        }
+
         public RegexMatchSegment(
+            RegexXml regexDef,
             String source,
             Int32 index,
             Int32 length)
             : base(source, index, length)
         {
+            RegexDef = regexDef;
+        }
+
+        public override bool IsInternal
+        {
+            get
+            {
+                return RegexDef.IsInternal;
+            }
         }
 
         public override bool Dividable
@@ -184,17 +232,69 @@ namespace Ditw.App.Lang.Tokenizer
             }
         }
 
+        private static Boolean MatchContain(Match m1, Match m2)
+        {
+            return m1.Index <= m2.Index && m1.Index + m1.Length >= m2.Index + m2.Length;
+        }
+
+        private List<Match> MergeMatches(Dictionary<Int32, List<Match>> matchList, MatchCollection matchColl)
+        {
+            List<Match> toRemoveList = new List<Match>();
+            List<Match> result = new List<Match>(matchList.Count + matchColl.Count);
+            for (Int32 i = 0; i < matchColl.Count; i++)
+            {
+                Boolean removeCurrent = false;
+                foreach (var ml in matchList.Keys)
+                {
+                    foreach(var m in matchList[ml])
+                    {
+                        if (MatchContain(matchColl[i], m))
+                        {
+                            toRemoveList.Add(m);
+                        }
+                        else if (MatchContain(m, matchColl[i]))
+                        {
+                            removeCurrent = true;
+                            break;
+                        }
+                    }
+                    if (removeCurrent)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        toRemoveList.ForEach(
+                            m => matchList[ml].Remove(m)
+                            );
+                        toRemoveList.Clear();
+                    }
+                }
+                if (!removeCurrent)
+                {
+                    result.Add(matchColl[i]);
+                }
+            }
+
+            return result;
+        }
+
         private List<RegexMatchSegment> _Match(String rawText)
         {
             //BuildRegexes();
             
             List<RegexMatchSegment> matchSegments = new List<RegexMatchSegment>();
+            Dictionary<Int32, List<Match>> regexMatches = new Dictionary<Int32, List<Match>>();
             for (Int32 i = 0; i < Xml.RegexArray.Length; i++)
             {
-                var matches = Xml.RegexArray[i].Matches(rawText);
-                for (Int32 j = 0; j < matches.Count; j++)
+                var matches = Xml.RegexArray[i].Expr.Matches(rawText);
+                regexMatches[i] = MergeMatches(regexMatches, matches);
+            }
+            foreach (var i in regexMatches.Keys)
+            {
+                foreach (var m in regexMatches[i])
                 {
-                    AddMatch(matchSegments, matches[j], rawText);
+                    AddMatch(Xml.RegexArray[i], matchSegments, m, rawText);
                 }
             }
             return matchSegments;
@@ -214,10 +314,10 @@ namespace Ditw.App.Lang.Tokenizer
             segments.AddRange(newList);
         }
 
-        private void AddMatch(List<RegexMatchSegment> segments, Match m, String src)
+        private void AddMatch(RegexXml regex, List<RegexMatchSegment> segments, Match m, String src)
         {
             Int32 matchLastIndex = m.Index + m.Length - 1;
-            RegexMatchSegment matchSeg = new RegexMatchSegment(src, m.Index, m.Length);
+            RegexMatchSegment matchSeg = new RegexMatchSegment(regex, src, m.Index, m.Length);
             foreach (var s in segments)
             {
                 if (BasicTextSegment.Contain(s, matchSeg))
