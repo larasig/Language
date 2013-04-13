@@ -112,6 +112,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\NEWSFEED-NET\NewsFeeds\Ditw.App.MediaSource.DbUtil\Ditw.App.MediaSource.DbUtil.csproj">
+      <Project>{09D28800-6188-43BE-86FC-1B010C322F80}</Project>
+      <Name>Ditw.App.MediaSource.DbUtil</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\UTIL\Ditw.Util.Xml\Ditw.Util.Xml.csproj">
       <Project>{F39FA2D6-0E1A-4792-B375-1B5C4C6E510A}</Project>
       <Name>Ditw.Util.Xml</Name>

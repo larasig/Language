@@ -7,6 +7,7 @@ using Ditw.Util.Xml;
 using Ditw.App.Lang.Tokenizer;
 using Ditw.Test.Lang.Segmentation;
 using System.Diagnostics;
+using Ditw.App.MediaSource.DbUtil;
 
 namespace Ditw.Test.Lang.SegmentationTestCaseGenerator
 {
@@ -22,6 +23,14 @@ namespace Ditw.Test.Lang.SegmentationTestCaseGenerator
             foreach (var t in testSuite.Tests)
             {
                 TestCaseHandler(t);
+            }
+        }
+
+        static void DbTestCases(Int32 srcId, Action<String> TestCaseHandler)
+        {
+            foreach (var c in MySQLAgentNewsFeeds.ReadStringsFromSource(srcId, "content"))
+            {
+                TestCaseHandler(c);
             }
         }
 
@@ -62,9 +71,10 @@ namespace Ditw.Test.Lang.SegmentationTestCaseGenerator
   <regexgroup name=""keywords"">
     <regex id=""name1""><![CDATA[[A-Z]\w*(\s+[A-Z]\w*)*]]></regex>
     <regex id=""name2""><![CDATA[""[^""]*""]]></regex>
-    <regex id=""name""><![CDATA[{{name1}}|{{name2}}]]></regex>
+    <regex id=""name3""><![CDATA[“[^“]*”]]></regex>
+    <regex id=""name"" isInternal=""0""><![CDATA[{{name1}}|{{name2}}|{{name3}}]]></regex>
     <regex id=""called""><![CDATA[(known as|called|named|codenamed|dubbed)]]></regex>
-    <regex id=""keywords""><![CDATA[(hacker group|malware|group|hacker)]]></regex>
+    <regex id=""keywords"" isInternal=""0""><![CDATA[(hacker group|malware|group|hacker)]]></regex>
     <regex id=""named"" isInternal=""0""><![CDATA[{{called}}(\s+\w+){0,1}\s+{{name}}]]></regex>
     <regex id=""pattern"" isInternal=""0""><![CDATA[{{keywords}}.*{{named}}]]></regex>
   </regexgroup>
@@ -114,7 +124,15 @@ namespace Ditw.Test.Lang.SegmentationTestCaseGenerator
             //RFTestCases(@"zhs_acquire_all.xml", RFTestCase_Test1); //RFTestCase_Segmentation); //RFTestCase_ZHS_PolRel);
             //RFTestCases(@"malware_threat_product.xml", RFTestCase_Malware1);
             //RFTestCases(@"malware_threat_sentences.xml", RFTestCase_Malware2);//RFTestCase_Malware1);
-            RFTestCases(@"malware_threat_product.xml", RFTestCase_Malware2);//RFTestCase_Malware1);
+            //RFTestCases(@"malware_threat_product.xml", RFTestCase_Malware2);//RFTestCase_Malware1);
+            DbTestCases(200100,
+                //s => Trace.Write("-----------------------------------\n" + s)
+                s =>
+                {
+                    Trace.Write("-----------------------------------\n" + s);
+                    RunTest(s, malwareExtract);
+                }
+                );
 
             //XmlUtil.Serialize(_testCases, _pathToRFTestCaseFiles + @"\segmentation_test.xml");
 			
@@ -140,9 +158,12 @@ namespace Ditw.Test.Lang.SegmentationTestCaseGenerator
 
         static void RFTestCase_Regex(EvtXTest testCase, String regex)
         {
+#if true
+            RunTest(testCase.Sentence, regex);
+#else
+            String tmp = testCase.Sentence; //"而且，花旗银行还开出7.7亿美元收购仁川炼油公司的价格，比中化集团的5.6亿美元高出2.2亿美元，超出了中化集团的承受能力，最终导致了并购失败。";
             RegexToken rt = new RegexToken();
             rt.Xml = XmlUtil.DeserializeString<RegexTokenXml>(regex);
-            String tmp = testCase.Sentence; //"而且，花旗银行还开出7.7亿美元收购仁川炼油公司的价格，比中化集团的5.6亿美元高出2.2亿美元，超出了中化集团的承受能力，最终导致了并购失败。";
             BasicTextSegment bts = new BasicTextSegment(
                 tmp, 0, tmp.Length);
             var t = rt.MatchText(bts);
@@ -151,6 +172,20 @@ namespace Ditw.Test.Lang.SegmentationTestCaseGenerator
             t.TraceSegment();
             Trace.WriteLine(String.Empty);
             //Console.ReadLine();
+#endif
+        }
+
+        static void RunTest(String txt, String regex)
+        {
+            RegexToken rt = new RegexToken();
+            rt.Xml = XmlUtil.DeserializeString<RegexTokenXml>(regex);
+            BasicTextSegment bts = new BasicTextSegment(
+                txt, 0, txt.Length);
+            var t = rt.MatchText(bts);
+            Trace.WriteLine(t.Text);
+            Trace.WriteLine("-----------------------------------");
+            t.TraceSegment();
+            Trace.WriteLine(String.Empty);
         }
 
         static void RFTestCase_Segmentation(EvtXTest testCase)
