@@ -104,6 +104,50 @@ namespace Ditw.Test.Lang.SegmentationTestCaseGenerator
     <regex><![CDATA[{{year}}{{month}}{{date}}]]></regex>
   </regexgroup>
 </regextokens>";
+
+        const String Tokens = @"<regextokens id=""tokens"">
+  <constants>
+    <c id=""c_hacker"">
+      <e>hacker</e>
+      <e>cybercrook</e>
+      <e>cyber-crook</e>
+      <e>cybercriminal</e>
+      <e>cyber-criminal</e>
+      <e>cyberextortionist</e>
+      <e>cybergroup</e>
+      <e>hacktivist</e>
+      <e>hactivist</e>
+
+      <e>cyber crook</e>
+      <e>cyber criminal</e>
+      <e>cyber fiends</e>
+      <e>cyber snoopers</e>
+      <e>hacker group</e>
+      <e>hackers group</e>
+      <e>hackers' group</e>
+      <e>hacker groups</e>
+      <e>hacker collective</e>
+      <e>hacking group</e>
+      <e>hacking collective</e>
+      <e>hacktivist group</e>
+      <e>hacktivism group</e>
+      <e>hactivist group</e>
+      <e>hacking activist group</e>
+      <e>hacker activist group</e>
+      <e>computer crook</e>
+    </c>
+  </constants>
+  <regexgroup name=""keywords"">
+    <regex id=""name1""><![CDATA[[A-Z]\w*(\s+[A-Z]\w*)*]]></regex>
+    <regex id=""name2""><![CDATA[""[^""]*""]]></regex>
+    <regex id=""name3""><![CDATA[“[^“]*”]]></regex>
+    <regex id=""name"" isInternal=""0""><![CDATA[{{name1}}|{{name2}}|{{name3}}]]></regex>
+    <regex id=""keywords_hacker"" isInternal=""0"">
+      <![CDATA[hacker]]>
+    </regex>
+  </regexgroup>
+</regextokens>";
+
         static SegmentationTestCases _testCases;
         static void Main(string[] args)
         {
@@ -130,7 +174,9 @@ namespace Ditw.Test.Lang.SegmentationTestCaseGenerator
                 s =>
                 {
                     Trace.Write("-----------------------------------\n" + s);
-                    RunTest(s, malwareExtract);
+                    Trace.WriteLine("-----------------------------------\n");
+                    //RunTest(s, malwareExtract);
+                    Test_TextPreprocessor(s);
                 }
                 );
 
@@ -138,6 +184,15 @@ namespace Ditw.Test.Lang.SegmentationTestCaseGenerator
 			
 			Console.Write("Press any key to continue . . . ");
 			Console.ReadKey(true);
+        }
+
+        static void Test_TextPreprocessor(String text)
+        {
+            foreach (var s in TextPreProcessor.GetSentences(text))
+            {
+                //Trace.WriteLine(s.Text);
+                RunTest(s.Text, Tokens);
+            }
         }
 
         static void RFTestCase_Malware1(EvtXTest testCase)
