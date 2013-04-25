@@ -107,6 +107,11 @@ namespace Ditw.App.Lang.Tokenizer
             var children = Decompose();
             if (children.Count > 1)
             {
+                if (children.Where(c => !c.IsInternal).Count() > 0)
+                {
+                    Trace.WriteLine(Text);
+                    Trace.WriteLine("-----------------------------------");
+                }
                 foreach (var s in children)
                 {
                     s.TraceSegment();

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Xml.Serialization;
 using System.Text.RegularExpressions;
+using System.Diagnostics;
 
 namespace Ditw.App.Lang.Tokenizer
 {
@@ -71,9 +72,154 @@ namespace Ditw.App.Lang.Tokenizer
         }
     }
 
+    [XmlRoot("c")]
+    public class StringConstant
+    {
+        [XmlAttribute("id")]
+        public String Id
+        {
+            get;
+            set;
+        }
+
+        [XmlAttribute("casesensitive")]
+        public Int32 _CaseSensitive
+        {
+            get;
+            set;
+        }
+
+        [XmlIgnore]
+        public Boolean CaseSensitive
+        {
+            get { return _CaseSensitive != 0; }
+        }
+
+        [XmlAttribute("allowplural")]
+        public Int32 _AllowPlural
+        {
+            get;
+            set;
+        }
+
+        [XmlIgnore]
+        public Boolean AllowPlural
+        {
+            get { return _AllowPlural != 0; }
+        }
+
+        [XmlElement("e")]
+        public List<String> WordList
+        {
+            get;
+            set;
+        }
+
+        private String ConstantExpr(String word)
+        {
+
+            String result = word;
+            // encoding
+            result = result.Replace(".", @"\.");
+            if (AllowPlural)
+            {
+                result = result + @"s?";
+            }
+            return result; //String.Format("({0})", word);
+        }
+
+        public static List<String> ReorderWordList(List<String> wordList)
+        {
+            List<String> newList = new List<String>(wordList.Count);
+            foreach (var w in wordList)
+            {
+                Int32 idx = 0;
+                Boolean handled = false;
+                foreach (var v in newList)
+                {
+                    if (w.Equals(v, StringComparison.Ordinal))
+                    {
+                        Trace.WriteLine("Duplicate entry found: " + w);
+                        handled = true;
+                        break;
+                    }
+                    else if (w.StartsWith(v))
+                    {
+                        newList.Insert(idx, w);
+                        handled = true;
+                        break;
+                    }
+                    idx ++;
+                }
+                if (!handled)
+                {
+                    // add to the end.
+                    newList.Add(w);
+                }
+            }
+            return newList;
+        }
+
+        private String _expr;
+        internal String Expr
+        {
+            get
+            {
+                if (String.IsNullOrEmpty(_expr))
+                {
+                    var reorderedList = ReorderWordList(WordList);
+                    if (reorderedList.Count == 0)
+                        return null;
+                    StringBuilder builder = new StringBuilder();
+                    builder.Append(@"\b(");
+                    builder.Append(ConstantExpr(reorderedList[0]));
+                    foreach (var w in reorderedList)
+                    {
+                        builder.AppendFormat("|{0}", ConstantExpr(w));
+                    }
+                    builder.Append(@")\b");
+                    _expr = builder.ToString();
+                }
+                return _expr;
+            }
+        }
+
+        private Regex _regex;
+        [XmlIgnore]
+        public Regex RegExpr
+        {
+            get
+            {
+                if (_regex == null)
+                {
+                    _regex = new Regex(Expr);
+                }
+                return _regex;
+            }
+        }
+    }
+
+    [XmlRoot("constants")]
+    public class StringConstants
+    {
+        [XmlElement("c")]
+        public List<StringConstant> ConstantList
+        {
+            get;
+            set;
+        }
+    }
+
     [XmlRoot("regextokens")]
     public class RegexTokenXml
     {
+        [XmlElement("constants")]
+        public StringConstants Constants
+        {
+            get;
+            set;
+        }
+
         [XmlAttribute("id")]
         public String Id
         {
@@ -125,9 +271,15 @@ namespace Ditw.App.Lang.Tokenizer
                 {
                     if (_regexes == null)
                     {
+                        Int32 constCount = Constants.ConstantList.Count;
                         Int32 regexCount = RegexGroups.Sum(rg => rg.Regexes.Length);
                         _regexes = new RegexXml[regexCount];
-                        _regexMapping = new Dictionary<String, String>(regexCount);
+                        _regexMapping = new Dictionary<String, String>(constCount + regexCount);
+                        foreach (var c in Constants.ConstantList)
+                        {
+                            _regexMapping.Add(c.Id, c.Expr);
+                        }
+
                         Int32 regexIndex = 0;
                         for (Int32 i = 0; i < RegexGroups.Length; i++)
                         {

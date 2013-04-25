@@ -8,6 +8,7 @@ using Ditw.App.Lang.Tokenizer;
 using Ditw.Test.Lang.Segmentation;
 using System.Diagnostics;
 using Ditw.App.MediaSource.DbUtil;
+using System.Text.RegularExpressions;
 
 namespace Ditw.Test.Lang.SegmentationTestCaseGenerator
 {
@@ -24,6 +25,44 @@ namespace Ditw.Test.Lang.SegmentationTestCaseGenerator
             {
                 TestCaseHandler(t);
             }
+        }
+
+        static void Test1()
+        {
+#if false
+            List<string> l1 = new List<string>()
+            {
+                "hacker activist",
+                "hacker",
+                "hacker groups",
+                "hacker group",
+            };
+            foreach(string l in StringConstant.ReorderWordList(l1))
+            {
+                Console.WriteLine(l);
+            }
+            Console.ReadLine();
+#endif
+
+            Regex regex = new Regex("(hacker)|(hacker group)");
+            String text = "hacker group LulzSec";
+            //regex.Options = RegexOptions.
+#if false
+            var matches = regex.Matches(text);
+            for (Int32 i = 0; i < matches.Count; i ++)
+            {
+                var m = matches[i];
+                Console.WriteLine("Match: " + text.Substring(m.Index, m.Length));
+            }
+#else
+            var m = regex.Match(text);
+            while (m.Success)
+            {
+                Console.WriteLine("Match: " + text.Substring(m.Index, m.Length));
+                m = m.NextMatch();
+            }
+#endif
+            Console.ReadLine();
         }
 
         static void DbTestCases(Int32 srcId, Action<String> TestCaseHandler)
@@ -107,7 +146,290 @@ namespace Ditw.Test.Lang.SegmentationTestCaseGenerator
 
         const String Tokens = @"<regextokens id=""tokens"">
   <constants>
-    <c id=""c_hacker"">
+    <c id=""c_nations"" casesensitive=""0"" allowplural=""0"">
+      <e>Abkhazia</e>
+      <e>Afghanistan</e>
+      <e>Albania</e>
+      <e>Algeria</e>
+      <e>Andorra</e>
+      <e>Angola</e>
+      <e>Antigua and Barbuda</e>
+      <e>Argentina</e>
+      <e>Armenia</e>
+      <e>Australia</e>
+      <e>Austria</e>
+      <e>Azerbaijan</e>
+      <e>Bahamas</e>
+      <e>Bahrain</e>
+      <e>Bangladesh</e>
+      <e>Barbados</e>
+      <e>Belarus</e>
+      <e>Belgium</e>
+      <e>Belize</e>
+      <e>Benin</e>
+      <e>Bhutan</e>
+      <e>Bolivia</e>
+      <e>Bosnia and Herzegovina</e>
+      <e>Botswana</e>
+      <e>Brazil</e>
+      <e>Britain</e>
+      <e>Brunei</e>
+      <e>Bulgaria</e>
+      <e>Burkina Faso</e>
+      <e>Burma</e>
+      <e>Burundi</e>
+      <e>Cambodia</e>
+      <e>Cameroon</e>
+      <e>Canada</e>
+      <e>Cape Verde</e>
+      <e>Central African Republic</e>
+      <e>Chad</e>
+      <e>Chile</e>
+      <e>China</e>
+      <e>Colombia</e>
+      <e>Comoros</e>
+      <e>Congo</e>
+      <e>Congo-Kinshasa</e>
+      <e>Congo-Brazzaville</e>
+      <e>Cook Islands</e>
+      <e>Costa Rica</e>
+      <e>Côte d'Ivoire</e>
+      <e>Croatia</e>
+      <e>Cuba</e>
+      <e>Cyprus</e>
+      <e>Czech Republic</e>
+      <e>Denmark</e>
+      <e>Djibouti</e>
+      <e>Dominica</e>
+      <e>Dominican Republic</e>
+      <e>East Timor</e>
+      <e>Ecuador</e>
+      <e>Egypt</e>
+      <e>El Salvador</e>
+      <e>Equatorial Guinea</e>
+      <e>Eritrea</e>
+      <e>Estonia</e>
+      <e>Ethiopia</e>
+      <e>Fiji</e>
+      <e>Finland</e>
+      <e>France</e>
+      <e>Gabon</e>
+      <e>Gambia</e>
+      <e>Georgia</e>
+      <e>Germany</e>
+      <e>Ghana</e>
+      <e>Greece</e>
+      <e>Grenada</e>
+      <e>Guatemala</e>
+      <e>Guinea</e>
+      <e>Guinea-Bissau</e>
+      <e>Guyana</e>
+      <e>Haiti</e>
+      <e>Honduras</e>
+      <e>Hungary</e>
+      <e>Iceland</e>
+      <e>India</e>
+      <e>Indonesia</e>
+      <e>Iran</e>
+      <e>Iraq</e>
+      <e>Ireland</e>
+      <e>Israel</e>
+      <e>Italy</e>
+      <e>Jamaica</e>
+      <e>Japan</e>
+      <e>Jordan</e>
+      <e>Kazakhstan</e>
+      <e>Kenya</e>
+      <e>Kiribati</e>
+      <e>North Korea</e>
+      <e>South Korea</e>
+      <e>Kosovo</e>
+      <e>Kuwait</e>
+      <e>Kyrgyzstan</e>
+      <e>Laos</e>
+      <e>Latvia</e>
+      <e>Lebanon</e>
+      <e>Lesotho</e>
+      <e>Liberia</e>
+      <e>Libya</e>
+      <e>Liechtenstein</e>
+      <e>Lithuania</e>
+      <e>Luxembourg</e>
+      <e>Macedonia</e>
+      <e>Madagascar</e>
+      <e>Malawi</e>
+      <e>Malaysia</e>
+      <e>Maldives</e>
+      <e>Mali</e>
+      <e>Malta</e>
+      <e>Marshall Islands</e>
+      <e>Mauritania</e>
+      <e>Mauritius</e>
+      <e>Mexico</e>
+      <e>Micronesia</e>
+      <e>Moldova</e>
+      <e>Monaco</e>
+      <e>Mongolia</e>
+      <e>Montenegro</e>
+      <e>Morocco</e>
+      <e>Mozambique</e>
+      <e>Myanmar</e>
+      <e>Nagorno-Karabakh</e>
+      <e>Namibia</e>
+      <e>Nauru</e>
+      <e>Nepal</e>
+      <e>Netherlands</e>
+      <e>New Zealand</e>
+      <e>Nicaragua</e>
+      <e>Niger</e>
+      <e>Nigeria</e>
+      <e>Norway</e>
+      <e>Oman</e>
+      <e>Pakistan</e>
+      <e>Palau</e>
+      <e>Palestine</e>
+      <e>Panama</e>
+      <e>Papua New Guinea</e>
+      <e>Paraguay</e>
+      <e>Peru</e>
+      <e>Philippines</e>
+      <e>Poland</e>
+      <e>Portugal</e>
+      <e>Qatar</e>
+      <e>Romania</e>
+      <e>Russia</e>
+      <e>Rwanda</e>
+      <e>Sahrawi Arab Democratic Republic</e>
+      <e>Saint Kitts and Nevis</e>
+      <e>Saint Lucia</e>
+      <e>Saint Vincent and the Grenadines</e>
+      <e>Samoa</e>
+      <e>San Marino</e>
+      <e>São Tomé and Príncipe</e>
+      <e>Saudi Arabia</e>
+      <e>Senegal</e>
+      <e>Serbia</e>
+      <e>Seychelles</e>
+      <e>Sierra Leone</e>
+      <e>Singapore</e>
+      <e>Slovakia</e>
+      <e>Slovenia</e>
+      <e>Solomon Islands</e>
+      <e>Somalia</e>
+      <e>Somaliland</e>
+      <e>South Africa</e>
+      <e>South Ossetia</e>
+      <e>South Sudan</e>
+      <e>Spain</e>
+      <e>Sri Lanka</e>
+      <e>Sudan</e>
+      <e>Suriname</e>
+      <e>Swaziland</e>
+      <e>Sweden</e>
+      <e>Switzerland</e>
+      <e>Syria</e>
+      <e>Taiwan</e>
+      <e>Tajikistan</e>
+      <e>Tanzania</e>
+      <e>Thailand</e>
+      <e>Togo</e>
+      <e>Tonga</e>
+      <e>Transnistria</e>
+      <e>Trinidad and Tobago</e>
+      <e>Tunisia</e>
+      <e>Turkey</e>
+      <e>Turkmenistan</e>
+      <e>Tuvalu</e>
+      <e>Uganda</e>
+      <e>Ukraine</e>
+      <e>United Arab Emirates</e>
+      <e>UAE</e>
+      <e>United Kingdom</e>
+      <e>UK</e>
+      <e>United States</e>
+      <e>US</e>
+      <e>U.S.</e>
+      <e>USA</e>
+      <e>Uruguay</e>
+      <e>Uzbekistan</e>
+      <e>Vanuatu</e>
+      <e>Vatican City</e>
+      <e>Venezuela</e>
+      <e>Vietnam</e>
+      <e>Yemen</e>
+      <e>Zambia</e>
+      <e>Zimbabwe</e>
+
+      <e>D.R.C.</e>
+      <e>P.R.C.</e>
+
+      <e>EU</e>
+    </c>
+    <c id=""c_cyberattack"" casesensitive=""0"" allowplural=""1"">
+      <e>botnet attack</e>
+      <e>botnet-driven attack</e>
+      <e>cyber attack</e>
+      <e>cyber-attack</e>
+      <e>cyberattack</e>
+      <e>cyber intrusion</e>
+      <e>crypto attack</e>
+      <e>trojan attack</e>
+      <e>online attack</e>
+      <e>malware attack</e>
+
+      <e>DoS attack</e>
+      <e>DoS Attack</e>
+      <e>DDoS assault</e>
+      <e>DDoS Assault</e>
+      <e>DDoS campaign</e>
+      <e>DDoS Campaign</e>
+      <e>DDoS attack</e>
+      <e>DDoS Attack</e>
+      <e>SQL injection attack</e>
+      <e>denial of service attack</e>
+      <e>denial-of-service attack</e>
+      <e>distributed denial-of-service attack</e>
+      <e>distributed denial of service attack</e>
+      <e>phishing attack</e>
+      <e>smurf attack</e>
+      <e>spam attack</e>
+      <e>virus attack</e>
+      <e>computer virus attack</e>
+      <e>viral post attack</e>
+      <e>worm attack</e>
+      <e>zero-day attack</e>
+      <e>zero day attack</e>
+      <e>zero-hour attack</e>
+      <e>zero hour attack</e>
+      <e>day zero attack</e>
+      <e>zero-day exploit</e>
+      <e>zero day exploit</e>
+      <e>zero-hour exploit</e>
+      <e>zero hour exploit</e>
+      <e>day zero exploit</e>
+
+      <e>hacker attack</e>
+
+      <e>remoteadmin attack</e>
+      <e>malware-based attack</e>
+      <e>malware/virus attack</e>
+      <e>rogue attack</e>
+      <e>remote admin attack</e>
+      <e>dos attack</e>
+      <e>spam-storm attack</e>
+      <e>spam-driven attack</e>
+      <e>malware-driven attack</e>
+      <e>malware-like attack</e>
+      <e>malware-helped attack</e>
+      <e>malware-related attack</e>
+    </c>
+    <c id=""c_called"" casesensitive=""0"" allowplural=""0"">
+      <e>known as</e>
+      <e>called</e>
+      <e>dubbed</e>
+      <e>calling itself</e>
+    </c>
+    <c id=""c_hacker"" casesensitive=""0"" allowplural=""1"">
       <e>hacker</e>
       <e>cybercrook</e>
       <e>cyber-crook</e>
@@ -125,7 +447,6 @@ namespace Ditw.Test.Lang.SegmentationTestCaseGenerator
       <e>hacker group</e>
       <e>hackers group</e>
       <e>hackers' group</e>
-      <e>hacker groups</e>
       <e>hacker collective</e>
       <e>hacking group</e>
       <e>hacking collective</e>
@@ -138,19 +459,21 @@ namespace Ditw.Test.Lang.SegmentationTestCaseGenerator
     </c>
   </constants>
   <regexgroup name=""keywords"">
+    <regex id=""attack_ind""><![CDATA[{{c_cyberattack}}]]></regex>
+    <regex id=""hacker_ind""><![CDATA[{{c_hacker}}]]></regex>
     <regex id=""name1""><![CDATA[[A-Z]\w*(\s+[A-Z]\w*)*]]></regex>
     <regex id=""name2""><![CDATA[""[^""]*""]]></regex>
     <regex id=""name3""><![CDATA[“[^“]*”]]></regex>
-    <regex id=""name"" isInternal=""0""><![CDATA[{{name1}}|{{name2}}|{{name3}}]]></regex>
-    <regex id=""keywords_hacker"" isInternal=""0"">
-      <![CDATA[hacker]]>
-    </regex>
+    <regex id=""name"" isInternal=""0""><![CDATA[{{hacker_ind}}|{{name2}}|{{name3}}]]></regex>
+    <regex id=""called_name"" isInternal=""0""><![CDATA[{{c_called}}(\s+the)?\s+({{name}}|{{name1}})]]></regex>
   </regexgroup>
 </regextokens>";
 
         static SegmentationTestCases _testCases;
         static void Main(string[] args)
         {
+
+            //Test1();
             //BuiltInExpressions.LIST.Match("以色列、叙利亚和其他中东国家也受到了一定影响");
 			//TestAndExpr();
 			//TestRegexExpr_PatternWNW();
@@ -237,8 +560,8 @@ namespace Ditw.Test.Lang.SegmentationTestCaseGenerator
             BasicTextSegment bts = new BasicTextSegment(
                 txt, 0, txt.Length);
             var t = rt.MatchText(bts);
-            Trace.WriteLine(t.Text);
-            Trace.WriteLine("-----------------------------------");
+            //Trace.WriteLine(t.Text);
+            //Trace.WriteLine("-----------------------------------");
             t.TraceSegment();
             Trace.WriteLine(String.Empty);
         }
