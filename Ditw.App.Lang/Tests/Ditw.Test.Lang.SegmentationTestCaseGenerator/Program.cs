@@ -67,7 +67,7 @@ namespace Ditw.Test.Lang.SegmentationTestCaseGenerator
 
         static void DbTestCases(Int32 srcId, Action<String> TestCaseHandler)
         {
-            foreach (var c in MySQLAgentNewsFeeds.ReadStringsFromSource(srcId, "content"))
+            foreach (var c in MySQLAgentNewsFeeds.ReadStringsFromSource("news_eng", srcId, "content"))
             {
                 TestCaseHandler(c);
             }
