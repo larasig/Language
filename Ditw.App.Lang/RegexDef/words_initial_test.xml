@@ -1,5 +1,5 @@
 ﻿<regextokens id="tokens">
   <regexgroup name="keywords">
-    <regex id="name" isInternal="0"><![CDATA[{{t}}]]></regex>
+    <regex id="name" isInternal="0"><![CDATA[{{capital_initial_except_sentence_start}}]]></regex>
   </regexgroup>
 </regextokens>

@@ -61,7 +61,7 @@ namespace Ditw.Test.Lang.RegexTokenUnitTest
 
             RunTest_Match(token,
     "First discovered in 2011, I'm the Shylock banking Trojan affects virtually all versions of Windows from Windows 2000 onward, and has turned into one of the most advanced forms of financial fraud malware around.",
-    new String[] { "First", "Shylock", "Trojan", "Windows", "Windows" }
+    new String[] { "I", "Shylock", "Trojan", "Windows", "Windows" }
     );
 
         }
