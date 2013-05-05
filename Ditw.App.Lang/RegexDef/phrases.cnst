@@ -1,0 +1,8 @@
+﻿<constants>
+    <c id="c_called" casesensitive="0" allowplural="0">
+      <e>known as</e>
+      <e>called</e>
+      <e>dubbed</e>
+      <e>calling itself</e>
+    </c>
+</constants>

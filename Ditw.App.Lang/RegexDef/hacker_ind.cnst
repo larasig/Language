@@ -1,0 +1,30 @@
+﻿<constants>
+  <c id="c_hacker" casesensitive="0" allowplural="1">
+    <e>hacker</e>
+    <e>cybercrook</e>
+    <e>cyber-crook</e>
+    <e>cybercriminal</e>
+    <e>cyber-criminal</e>
+    <e>cyberextortionist</e>
+    <e>cybergroup</e>
+    <e>hacktivist</e>
+    <e>hactivist</e>
+
+    <e>cyber crook</e>
+    <e>cyber criminal</e>
+    <e>cyber fiends</e>
+    <e>cyber snoopers</e>
+    <e>hacker group</e>
+    <e>hackers group</e>
+    <e>hackers' group</e>
+    <e>hacker collective</e>
+    <e>hacking group</e>
+    <e>hacking collective</e>
+    <e>hacktivist group</e>
+    <e>hacktivism group</e>
+    <e>hactivist group</e>
+    <e>hacking activist group</e>
+    <e>hacker activist group</e>
+    <e>computer crook</e>
+  </c>
+</constants>

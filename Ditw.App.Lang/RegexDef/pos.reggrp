@@ -1,0 +1,3 @@
+﻿<regexgroup name="positions">
+  <regex id="not_at_start" active="0"><![CDATA[(?<!^)]]></regex>
+</regexgroup>

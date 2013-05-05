@@ -1,0 +1,60 @@
+﻿<constants>
+  <c id="c_cyberattack" casesensitive="0" allowplural="1">
+    <e>botnet attack</e>
+    <e>botnet-driven attack</e>
+    <e>cyber attack</e>
+    <e>cyber-attack</e>
+    <e>cyberattack</e>
+    <e>cyber intrusion</e>
+    <e>crypto attack</e>
+    <e>trojan attack</e>
+    <e>online attack</e>
+    <e>malware attack</e>
+
+    <e>DoS attack</e>
+    <e>DoS Attack</e>
+    <e>DDoS assault</e>
+    <e>DDoS Assault</e>
+    <e>DDoS campaign</e>
+    <e>DDoS Campaign</e>
+    <e>DDoS attack</e>
+    <e>DDoS Attack</e>
+    <e>SQL injection attack</e>
+    <e>denial of service attack</e>
+    <e>denial-of-service attack</e>
+    <e>distributed denial-of-service attack</e>
+    <e>distributed denial of service attack</e>
+    <e>phishing attack</e>
+    <e>smurf attack</e>
+    <e>spam attack</e>
+    <e>virus attack</e>
+    <e>computer virus attack</e>
+    <e>viral post attack</e>
+    <e>worm attack</e>
+    <e>zero-day attack</e>
+    <e>zero day attack</e>
+    <e>zero-hour attack</e>
+    <e>zero hour attack</e>
+    <e>day zero attack</e>
+    <e>zero-day exploit</e>
+    <e>zero day exploit</e>
+    <e>zero-hour exploit</e>
+    <e>zero hour exploit</e>
+    <e>day zero exploit</e>
+
+    <e>hacker attack</e>
+
+    <e>remoteadmin attack</e>
+    <e>malware-based attack</e>
+    <e>malware/virus attack</e>
+    <e>rogue attack</e>
+    <e>remote admin attack</e>
+    <e>dos attack</e>
+    <e>spam-storm attack</e>
+    <e>spam-driven attack</e>
+    <e>malware-driven attack</e>
+    <e>malware-like attack</e>
+    <e>malware-helped attack</e>
+    <e>malware-related attack</e>
+  </c>
+</constants>

@@ -1,0 +1,6 @@
+﻿<regexgroup name="keywords">
+  <regex id="t"><![CDATA[(?<!^)[A-Z]\w*(\s+[A-Z]\w*)*]]></regex>
+  <!--
+  <regex id="capital_initial"><![CDATA[\b[A-Z]\w*(\s+[A-Z]\w*)*]]></regex>
+  -->
+</regexgroup>

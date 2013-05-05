@@ -1,0 +1,14 @@
+﻿<regextokens id="tokens">
+  <regexgroup name="keywords">
+    <regex id="attack_ind"><![CDATA[{{c_cyberattack}}]]></regex>
+    <regex id="hacker_ind"><![CDATA[{{c_hacker}}]]></regex>
+    <regex id="name1"><![CDATA[[A-Z]\w*(\s+[A-Z]\w*)*]]></regex>
+    <regex id="name2"><![CDATA["[^"]*"]]></regex>
+    <regex id="name3"><![CDATA[“[^“]*”]]></regex>
+    <regex id="name"><![CDATA[{{name1}}|{{name2}}|{{name3}}]]></regex>
+    <regex id="called_name" isInternal="0"><![CDATA[{{c_called}}(\s+the)?\s+{{name}}]]></regex>
+    <regex id="hacker_name" isInternal="0"><![CDATA[{{c_hacker}}\s+{{name}}]]></regex>
+    <regex id="malware_name1" isInternal="0"><![CDATA[{{name}}(\s+\w+)?\s+{{c_malware_ind}}]]></regex>
+    <regex id="malware_name2" isInternal="0"><![CDATA[{{c_malware_ind}}(\s+\w+)?\s+{{name}}]]></regex>
+  </regexgroup>
+</regextokens>

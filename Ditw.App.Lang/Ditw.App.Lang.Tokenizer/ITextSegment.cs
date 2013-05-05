@@ -40,6 +40,11 @@ namespace Ditw.App.Lang.Tokenizer
 
         IList<ITextSegment> Decompose();
 
+        IList<ITextSegment> ChildSegments
+        {
+            get;
+        }
+
         #region DEBUG
         void TraceSegment();
         #endregion
@@ -101,6 +106,27 @@ namespace Ditw.App.Lang.Tokenizer
             get { return Source.Substring(StartIndex, Length); }
         }
 
+        public virtual void TraceChildSegments()
+        {
+            //if (ChildSegments
+            //    .Where(s => !s.IsInternal)
+            //    .Count() > 0)
+            //{
+            //    Trace.WriteLine(Text);
+            //    Trace.WriteLine("-----------------------------------");
+            //    foreach (var s in ChildSegments)
+            //    {
+            //        s.TraceSegment();
+            //    }
+            //}
+            //else
+            {
+                foreach (var s in ChildSegments)
+                {
+                    s.TraceSegment();
+                }
+            }
+        }
 
         public virtual void TraceSegment()
         {
@@ -130,6 +156,16 @@ namespace Ditw.App.Lang.Tokenizer
         public virtual bool IsInternal
         {
             get { return true; }
+        }
+
+        private IList<ITextSegment> _childSegments = new List<ITextSegment>();
+
+        public IList<ITextSegment> ChildSegments
+        {
+            get
+            {
+                return _childSegments;
+            }
         }
     }
 

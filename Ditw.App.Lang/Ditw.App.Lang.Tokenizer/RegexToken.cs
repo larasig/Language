@@ -5,6 +5,7 @@ using System.Text;
 using System.Xml.Serialization;
 using System.Text.RegularExpressions;
 using System.Diagnostics;
+using Ditw.Util.Xml;
 
 namespace Ditw.App.Lang.Tokenizer
 {
@@ -23,6 +24,22 @@ namespace Ditw.App.Lang.Tokenizer
         {
             get;
             set;
+        }
+
+        [XmlAttribute("active")]
+        public String _Active
+        {
+            get;
+            set;
+        }
+
+        [XmlIgnore]
+        public Boolean Active
+        {
+            get
+            {
+                return "0" != _Active;
+            }
         }
 
         [XmlIgnore]
@@ -121,6 +138,17 @@ namespace Ditw.App.Lang.Tokenizer
             String result = word;
             // encoding
             result = result.Replace(".", @"\.");
+            if (!CaseSensitive)
+            {
+                Char i = result[0];
+                if (Char.IsLetter(i))
+                {
+                    Char ilow = Char.ToLower(i);
+                    Char iUpp = Char.ToUpper(i);
+                    result = result.Substring(1);
+                    result = String.Format("[{0}{1}]{2}", ilow, iUpp, result);
+                }
+            }
             if (AllowPlural)
             {
                 result = result + @"s?";
@@ -235,6 +263,7 @@ namespace Ditw.App.Lang.Tokenizer
         }
 
         #region reg expression
+
         private RegexXml[] _regexes;
         //private Boolean _initilized = false;
         private Object _lock = new Object();
@@ -263,6 +292,57 @@ namespace Ditw.App.Lang.Tokenizer
 
             return result;
         }
+
+        private StringConstants[] _allConstants;
+        private RegexGroup[] _allExprGroups;
+        internal void LoadExtra(String[] filesConst = null, String[] filesExprGroup = null)
+        {
+            if (filesConst != null && filesConst.Length > 0)
+            {
+                Int32 idx;
+                if (Constants != null && Constants.ConstantList != null)
+                {
+                    _allConstants = new StringConstants[filesConst.Length + 1];
+                    _allConstants[0] = Constants;
+                    idx = 1;
+                }
+                else
+                {
+                    _allConstants = new StringConstants[filesConst.Length];
+                    idx = 0;
+                }
+                for (Int32 i = 0; i < filesConst.Length; i++)
+                {
+                    _allConstants[idx+i] = XmlUtil.DeserializeFromFile<StringConstants>(filesConst[i]);
+                }
+            }
+            else
+            {
+                if (Constants != null)
+                {
+                    _allConstants = new StringConstants[1] { Constants };
+                }
+                else
+                {
+                    _allConstants = new StringConstants[0] { };
+                }
+            }
+
+            if (filesExprGroup != null && filesExprGroup.Length > 0)
+            {
+                _allExprGroups = new RegexGroup[filesExprGroup.Length + RegexGroups.Length];
+                for (Int32 i = 0; i < filesExprGroup.Length; i++)
+                {
+                    _allExprGroups[i] = XmlUtil.DeserializeFromFile<RegexGroup>(filesExprGroup[i]);
+                }
+                Array.Copy(RegexGroups, 0, _allExprGroups, filesExprGroup.Length, RegexGroups.Length);
+            }
+            else
+            {
+                _allExprGroups = RegexGroups;
+            }
+        }
+
         private void BuildRegexes()
         {
             if (_regexes == null)
@@ -271,19 +351,23 @@ namespace Ditw.App.Lang.Tokenizer
                 {
                     if (_regexes == null)
                     {
-                        Int32 constCount = Constants.ConstantList.Count;
-                        Int32 regexCount = RegexGroups.Sum(rg => rg.Regexes.Length);
+                        Int32 constCount = _allConstants.Sum(
+                            c => c.ConstantList.Count); // Constants.ConstantList.Count;
+                        Int32 regexCount = _allExprGroups.Sum(rg => rg.Regexes.Length);
                         _regexes = new RegexXml[regexCount];
                         _regexMapping = new Dictionary<String, String>(constCount + regexCount);
-                        foreach (var c in Constants.ConstantList)
+                        for (Int32 i = 0; i < _allConstants.Length; i++)
                         {
-                            _regexMapping.Add(c.Id, c.Expr);
+                            foreach (var c in _allConstants[i].ConstantList)
+                            {
+                                _regexMapping.Add(c.Id, c.Expr);
+                            }
                         }
 
                         Int32 regexIndex = 0;
-                        for (Int32 i = 0; i < RegexGroups.Length; i++)
+                        for (Int32 i = 0; i < _allExprGroups.Length; i++)
                         {
-                            var groupi = RegexGroups[i];
+                            var groupi = _allExprGroups[i];
                             for (Int32 j = 0; j < groupi.Regexes.Length; j++)
                             {
                                 groupi.Regexes[j].ExprText = ReplaceVariables(groupi.Regexes[j].ExprText);
@@ -327,6 +411,14 @@ namespace Ditw.App.Lang.Tokenizer
             private set;
         }
 
+        public override void TraceSegment()
+        {
+            if (!IsInternal)
+            {
+                Trace.WriteLine(String.Format("{0}({1})", Text, RegexDef.Id));
+            }
+        }
+
         public RegexMatchSegment(
             RegexXml regexDef,
             String source,
@@ -356,11 +448,54 @@ namespace Ditw.App.Lang.Tokenizer
 
     public class RegexToken
     {
+        public RegexToken()
+        {
+        }
+
+        public static RegexToken FromXml(String fileName, String[] constFiles = null, String[] exprFiles = null)
+        {
+            RegexToken rt = new RegexToken();
+            rt.Xml = XmlUtil.DeserializeFromFile<RegexTokenXml>(fileName);
+            rt.Xml.LoadExtra(constFiles, exprFiles);
+            return rt;
+
+        }
+
         public RegexTokenXml Xml
         {
             get;
             set;
         }
+
+        public void FindChildMatch(ITextSegment input)
+        {
+            if (!input.Dividable)
+            {
+                return;
+            }
+
+            List<RegexMatchSegment> matchSegments = new List<RegexMatchSegment>();
+            Dictionary<Int32, List<Match>> regexMatches = new Dictionary<Int32, List<Match>>();
+            for (Int32 i = 0; i < Xml.RegexArray.Length; i++)
+            {
+                if (Xml.RegexArray[i].Active)
+                {
+                    var matches = Xml.RegexArray[i].Expr.Matches(input.Text);
+                    regexMatches[i] = MergeMatches(regexMatches, matches);
+                }
+            }
+            foreach (var i in regexMatches.Keys)
+            {
+                foreach (var m in regexMatches[i])
+                {
+                    AddMatch(Xml.RegexArray[i], matchSegments, m, input.Text, true);
+                }
+            }
+            matchSegments.ForEach(
+                m => input.ChildSegments.Add(m)
+                );
+        }
+
 
         public ITextSegment MatchText(ITextSegment input)
         {
@@ -446,7 +581,7 @@ namespace Ditw.App.Lang.Tokenizer
             {
                 foreach (var m in regexMatches[i])
                 {
-                    AddMatch(Xml.RegexArray[i], matchSegments, m, rawText);
+                    AddMatch(Xml.RegexArray[i], matchSegments, m, rawText, false);
                 }
             }
             return matchSegments;
@@ -466,7 +601,8 @@ namespace Ditw.App.Lang.Tokenizer
             segments.AddRange(newList);
         }
 
-        private void AddMatch(RegexXml regex, List<RegexMatchSegment> segments, Match m, String src)
+        private void AddMatch(RegexXml regex, List<RegexMatchSegment> segments, Match m, String src,
+            Boolean allowOverlap)
         {
             Int32 matchLastIndex = m.Index + m.Length - 1;
             RegexMatchSegment matchSeg = new RegexMatchSegment(regex, src, m.Index, m.Length);
@@ -483,11 +619,14 @@ namespace Ditw.App.Lang.Tokenizer
                     RemoveShorterMatches(segments, matchSeg);
                     break;
                 }
-                if ((s.StartIndex <= m.Index && m.Index < s.StartIndex + s.Length) ||
-                    (s.StartIndex <= matchLastIndex && matchLastIndex < s.StartIndex + s.Length))
+                if (!allowOverlap)
                 {
-                    // overlapp?
-                    throw new NotImplementedException();
+                    if ((s.StartIndex <= m.Index && m.Index < s.StartIndex + s.Length) ||
+                        (s.StartIndex <= matchLastIndex && matchLastIndex < s.StartIndex + s.Length))
+                    {
+                        // overlapp?
+                        throw new NotImplementedException();
+                    }
                 }
             }
             segments.Add(matchSeg);
