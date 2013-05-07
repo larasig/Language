@@ -59,8 +59,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RegexRef", "RegexRef", "{1A
 		RegexDef\phrases.cnst = RegexDef\phrases.cnst
 		RegexDef\pos.reggrp = RegexDef\pos.reggrp
 		RegexDef\testRegex.xml = RegexDef\testRegex.xml
+		RegexDef\word_list_test.xml = RegexDef\word_list_test.xml
+		RegexDef\words_hyphened.reggrp = RegexDef\words_hyphened.reggrp
+		RegexDef\words_hyphened_test.xml = RegexDef\words_hyphened_test.xml
 		RegexDef\words_initial.reggrp = RegexDef\words_initial.reggrp
 		RegexDef\words_initial_test.xml = RegexDef\words_initial_test.xml
+		RegexDef\words_list.reggrp = RegexDef\words_list.reggrp
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ditw.Test.Lang.RegexTokenTests", "Tests\Ditw.Test.Lang.RegexTokenTests\Ditw.Test.Lang.RegexTokenTests.csproj", "{F3B8B247-B638-4182-AB8C-F131C731904B}"

@@ -1,0 +1,3 @@
+﻿<regexgroup name="keywords">
+  <regex id="one_word_list"><![CDATA[(?<![\w\s])\s*\w+(\s*,\s*\w+)+]]></regex>
+</regexgroup>

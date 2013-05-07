@@ -64,6 +64,42 @@ namespace Ditw.Test.Lang.RegexTokenUnitTest
     new String[] { "I", "Shylock", "Trojan", "Windows", "Windows" }
     );
 
+            // Test sentences starting with at 2 words of Cap-Initial
+            RunTest_Match(token,
+    "A Symantec original questions ST0-134 ST0-134 test answers NO.9 According to Symantec, what is a botnet?",
+    new String[] { "A Symantec", "ST0", "ST0", "NO", "According", "Symantec" }
+    );
+
+        }
+
+        [TestMethod]
+        public void Test_Hyphens()
+        {
+            var token = Loader.GetToken(
+                "words_hyphened_test.xml",
+                null,
+                new String[] { "words_hyphened.reggrp" }
+                );
+
+            RunTest_Match(token,
+    "Man-in-the-browser (MITB, MitB, MIB, MiB), a form of Internet threat related to man-in-the-middle (MITM), is a proxy Trojan horse[1] that infects a web browser by taking advantage of vulnerabilities in browser security to modify web pages, modify transaction content or insert additional transactions, all in a completely covert fashion invisible to both the user and host web application. A MitB attack will be successful irrespective of whether security mechanisms such as SSL/PKI and/or two or three-factor Authentication solutions are in place. A MitB attack may be countered by utilising out-of-band transaction verification, although SMS verification can be defeated by man-in-the-mobile (MitMo) malware infection on the mobile phone.",
+    new String[] { "Man-in-the-browser", "man-in-the-middle", "three-factor", "out-of-band", "man-in-the-mobile" }
+    );
+        }
+
+        [TestMethod]
+        public void Test_WordList()
+        {
+            var token = Loader.GetToken(
+                "word_list_test.xml",
+                null,
+                new String[] { "words_list.reggrp" }
+                );
+
+            RunTest_Match(token,
+    "Man-in-the-browser (MITB, MitB, MIB, MiB), a form of Internet threat related to man-in-the-middle (MITM), is a proxy Trojan horse[1] that infects a web browser by taking advantage of vulnerabilities in browser security to modify web pages, modify transaction content or insert additional transactions, all in a completely covert fashion invisible to both the user and host web application. A MitB attack will be successful irrespective of whether security mechanisms such as SSL/PKI and/or two or three-factor Authentication solutions are in place. A MitB attack may be countered by utilising out-of-band transaction verification, although SMS verification can be defeated by man-in-the-mobile (MitMo) malware infection on the mobile phone.",
+    new String[] { "MITB, MitB, MIB, MiB" }
+    );
         }
     }
 }
