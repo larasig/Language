@@ -1,0 +1,6 @@
+﻿<regexgroup name="names">
+  <regex id="name1"><![CDATA[[A-Z]\w*(\s+[A-Z]\w*)*]]></regex>
+  <regex id="name2"><![CDATA["[^"]*"]]></regex>
+  <regex id="name3"><![CDATA[“[^“]*”]]></regex>
+  <regex id="name"><![CDATA[{{name1}}|{{name2}}|{{name3}}]]></regex>
+</regexgroup>

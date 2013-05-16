@@ -48,6 +48,7 @@
     <Compile Include="Loader.cs" />
     <Compile Include="NameTest_Initial.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FullStoryTest_TeamGhostshell.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\UTIL\Ditw.Util.Xml\Ditw.Util.Xml.csproj">

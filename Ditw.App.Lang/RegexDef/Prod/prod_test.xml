@@ -1,0 +1,5 @@
+﻿<regextokens id="tokens">
+  <regexgroup name="keywords">
+    <regex id="test_name" isInternal="0"><![CDATA[{{not_at_sentence_start}}{{name}}]]></regex>
+  </regexgroup>
+</regextokens>

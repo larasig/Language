@@ -71,6 +71,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ditw.Test.Lang.RegexTokenTe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ditw.Test.Lang.RegexTokenUnitTest", "Tests\Ditw.Test.Lang.RegexTokenUnitTest\Ditw.Test.Lang.RegexTokenUnitTest.csproj", "{2A1A1158-2F35-4000-805B-A10689A0C25E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Prod", "Prod", "{B268B44B-D99C-4366-A9BD-B5AE3D461CAD}"
+	ProjectSection(SolutionItems) = preProject
+		RegexDef\Prod\names.reggrp = RegexDef\Prod\names.reggrp
+		RegexDef\Prod\prod_test.xml = RegexDef\Prod\prod_test.xml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = Ditw.App.Lang.vsmdi
@@ -162,5 +168,6 @@ Global
 		{7AD539ED-CB29-4841-958E-D0E051399F36} = {8811874A-7098-4FFF-B5A2-BE59B070CBF2}
 		{52F03265-ECAE-4D0D-B2A0-EA3AC15BDBFB} = {8811874A-7098-4FFF-B5A2-BE59B070CBF2}
 		{F39FA2D6-0E1A-4792-B375-1B5C4C6E510A} = {8811874A-7098-4FFF-B5A2-BE59B070CBF2}
+		{B268B44B-D99C-4366-A9BD-B5AE3D461CAD} = {1A27931B-5F93-42E5-8C26-4FE791BCAB91}
 	EndGlobalSection
 EndGlobal

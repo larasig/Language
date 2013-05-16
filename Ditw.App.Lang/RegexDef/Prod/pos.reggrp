@@ -1,0 +1,4 @@
+﻿<regexgroup name="positions">
+  <regex id="not_at_start" active="0"><![CDATA[(?<!^)]]></regex>
+  <regex id="not_at_sentence_start" active="0"><![CDATA[(?<!(^|\.\s*))]]></regex>
+</regexgroup>
